@@ -1,0 +1,21 @@
+
+(define-syntax +=
+  (syntax-rules ()
+                ((_ a b) (begin (set a (+ a b)) a))
+                ((_ a b ...) (begin (set a (+ a b ...)) a))))
+
+(define-syntax else
+  (syntax-rules ()
+                (( _ ...) (true  ... ))))
+
+(define-syntax for
+  (syntax-rules ()
+            ((_ init condition iter ...)
+                (begin
+                      init
+                      (while condition
+                            ...
+                            iter
+                      )))))
+
+(export {})

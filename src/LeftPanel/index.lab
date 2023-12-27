@@ -1,0 +1,45 @@
+(import store from "./src/store/index.lab")
+
+(let leftPanelChoose (style.create {
+           width:"100%",
+           height:"30px",
+           lineHeight:"30px",
+           border:"0px 0px 1px 0px",
+        }
+))
+
+(style.push (+ "." leftPanelChoose ":hover") {
+   backgroundColor:"55|70|50|255"
+})
+
+(function (ChooseIterm props)
+    (let storeState store.storeState)
+
+    <div className={leftPanelChoose}  onClick={(lambda () 
+        (set storeState.ChooseIterm props.item)
+        (app.update )
+      )} 
+    >{props.itemName}</div>
+)
+
+(function (LeftPanel props)
+    <div >
+      <ChooseIterm itemName={"按钮"} item={"button"}></ChooseIterm>
+      <ChooseIterm itemName={"选择按钮"} item={"select"}></ChooseIterm>
+      <ChooseIterm itemName={"复选框"} item={"CheckboxTest"}></ChooseIterm>
+      <ChooseIterm itemName={"图像"} item={"ImgTest"}></ChooseIterm>
+      <ChooseIterm itemName={"画布"} item={"Canvas"}></ChooseIterm>
+      <ChooseIterm itemName={"表格"} item={"table"}></ChooseIterm>
+      <ChooseIterm itemName={"单行编辑器"} item={"单行编辑器"}></ChooseIterm>
+      <ChooseIterm itemName={"文本"} item={"txt"}></ChooseIterm>
+      <ChooseIterm itemName={"进度条"} item={"process"}></ChooseIterm>
+      <ChooseIterm itemName={"日期和时间"} item={"日期和时间"}></ChooseIterm>
+      <ChooseIterm itemName={"滑动条"} item={"滑动条"}></ChooseIterm>
+      <ChooseIterm itemName={"音视频"} item={"VideoAudio"}></ChooseIterm>
+      <ChooseIterm itemName={"http请求"} item={"http"}></ChooseIterm>
+    </div > 
+)
+
+(export {
+  LeftPanel:LeftPanel
+})

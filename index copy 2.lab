@@ -1,0 +1,20 @@
+(import xxx form "./src/macro/index.lab")
+
+(import Header from "./src/Header/index.lab")
+(import LeftPanel from "./src/LeftPanel/index.lab")
+(import Layout from "./src/Layout/index.lab")
+(import store from "./src/store/index.lab")
+(import Items from "./src/Items/index.lab")
+
+
+(app.render 
+  <Layout.Layout 
+    header={Header.Header}
+    left={LeftPanel.LeftPanel}
+    right={Items.ShowItems}
+    >
+  </Layout.Layout>
+)
+
+
+;;/Users/panfeng/coder/myProject/LUI/cmake-build-release/LUI.app/Contents/MacOS/LUI /Users/panfeng/Desktop/Document/index.lab

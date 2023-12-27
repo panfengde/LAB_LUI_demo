@@ -1,0 +1,60 @@
+(style.push ".AppLayout" {
+    width:"100%",
+    height:"100%",
+    display:"flex",
+    flexDirection:"column",
+})
+
+(let AppLayoutHeader (style.create  {
+    width:"100%",
+    height:"60px",
+}))
+
+
+
+(style.push ".AppLayoutContent" {
+    flexGrow :"1",
+    width:"100%",
+    display:"flex",
+    fontSize:"12px"
+})
+
+
+(style.push ".AppLayoutContentLeft" {
+    width:"130px",
+    height:"100%",
+    border:"1px"
+})
+
+(style.push ".AppLayoutContentRight" {
+    flexGrow :"1",
+    height:"100%",
+    border:"1px 1px 1px 0px",
+    overflow:"hidden",
+    display:"inlineBlock"
+})
+
+
+(function  (Hello x)
+    <div>Hellotab</div>
+)
+
+(function (Layout props)  
+    <div className="AppLayout">
+        <div className={AppLayoutHeader}>
+            <props.header></props.header>
+        </div>
+        <div className="AppLayoutContent">
+            <div className="AppLayoutContentLeft">
+                <props.left></props.left>
+            </div>
+            <div className="AppLayoutContentRight">
+                <div style={{width:"100%",height:"100%"}}>
+                    <props.right></props.right>
+                </div>
+            </div>
+        </div>
+    </div>
+)
+
+(export {Layout:Layout})

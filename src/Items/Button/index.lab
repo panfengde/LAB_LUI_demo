@@ -1,0 +1,42 @@
+(import CodeComponent from "./src/Items/CodeComponent/index.lab")
+
+
+(let squareButtonStyle (style.create {
+             margin:"12px",
+             borderRadius:"0px",
+             color:"255|255|255|255"
+        }
+))
+
+(style.push ".circleButton" {
+             margin:"12px",
+        }
+)
+(function (Buttons props)
+  (let oneCode "(let squareButtonStyle (style.create {
+             margin:12px,
+             borderRadius:1px,
+             color:255|255|255|255
+        }
+))
+(app.render <button className={squareButtonStyle}>方形按钮</button>)")
+
+  <div >
+    <div >矩形按钮</div>
+    <div >
+        <button className="squareButton">方形按钮</button>
+        <div style={{fontSize:"12px",height:"14px",margin:"10px 0px 0px 0px"}}>代码示例：</div>
+        <CodeComponent.CodeComponent code={oneCode}></CodeComponent.CodeComponent>
+    </div>
+    
+    <div >圆形按钮</div>
+    <div >
+        <button className="circleButton" style={{ borderRadius:"5px"}}> 圆形按钮1 </button>
+        <button className="circleButton" style={{ borderRadius:"7px"}}> 圆形按钮2 </button>
+    </div>
+  </div>
+  )
+
+(export {
+  Buttons:Buttons
+})

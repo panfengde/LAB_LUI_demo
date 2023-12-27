@@ -1,0 +1,79 @@
+(import xxx form "./src/macro/index.lab")
+
+(style.push ".cell" {
+     color: "225|225|90|255",
+     flexGrow:"1",
+     border:"1px",
+     height:"100%",
+})
+
+(style.push ".oneBlock" {
+     backgroundColor: "225|125|60|255",
+     display:"inlineBlock",
+     height:"100%",
+     animationName:"hello",
+})
+
+
+(app.createKeyFrame "hello"  {
+        "0.0":{
+            width:"10px",
+
+        },
+        "0.5":{
+            width:"30px",
+        },
+        "1.0":{
+            width:"10px",
+        },
+    }
+)
+
+
+(function (Cell props)
+    <div className="cell">
+        <div className={(if (== props.row 1) "oneBlock" "")}>{props.row}</div>
+    </div>
+)
+
+(style.push ".row" {
+     width:"100%",
+     height:"30px",
+     display:"flex",
+     backgroundColor: "60|60|90|255"
+})
+
+
+(function (Row props)
+    (let data [])
+    (for (let i 0) (less i 10) (+= i 1)
+        (data.push <Cell row={props.row}></Cell>)
+    )
+    <div className="row">
+        {data}
+    </div>
+)
+
+(style.push ".table" {
+     width:"100%",
+     height:"100%",
+     backgroundColor: "30|30|40|255",
+     overflow:"scroll",
+})
+
+(function (Table props)
+    (let rows [])
+    (for (let i 0) (less i 30) (+= i 1)
+         (rows.push <Row row={i}></Row>)
+    )
+    <div className="table">
+       {rows}
+    </div>
+)
+
+
+(export {
+  Table:Table
+})
+
+;;animationName:"hello",

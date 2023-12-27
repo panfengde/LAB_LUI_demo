@@ -1,0 +1,24 @@
+
+(style.push ".Process" {
+            display:"inlineBlock",
+            border:"1px",
+            height:"30px",
+            lineHeight:"20px",
+            fontSize:"16px",
+            padding:"0px 4px 0px 4px"
+        }
+)
+
+
+(function (Process props)
+  <div >
+    <div className="Process">Process</div>
+    <div className="Process">Process</div>
+    <div className="Process">Process</div>
+    <div className="Process">Process</div>
+  </div>
+)
+
+(export {
+  Process:Process
+})

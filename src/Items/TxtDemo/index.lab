@@ -1,0 +1,21 @@
+
+(style.push ".TxtDemo" {
+            display:"inlineBlock",
+            border:"1px",
+            height:"30px",
+            lineHeight:"20px",
+            fontSize:"20px",
+            padding:"0px 4px 0px 4px"
+        }
+)
+
+
+(function (TxtDemo props)
+  <div >
+    <div className="TxtDemo">汉体书写信息技术标准相容</div>
+  </div>
+)
+
+(export {
+  TxtDemo:TxtDemo
+})
