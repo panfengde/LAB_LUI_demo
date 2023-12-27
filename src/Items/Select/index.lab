@@ -1,0 +1,12 @@
+(function (Selects props)
+  <div >
+    <select >
+      <option value="1" label="one">one</option>
+      <option value="2" label="two">two</option>
+    </select>
+  </div>
+)
+
+(export {
+  Selects:Selects
+})

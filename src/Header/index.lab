@@ -1,0 +1,56 @@
+(style.push ".headerConteiner" {
+           width:"100%",
+           height:"100%",
+           display:"flex",
+           justifyContent:"spaceBetween",
+           alignItems:"alignCenter",
+           backgroundColor: "230|244|255|255",
+        }
+)
+
+(style.push ".buttonClass" {
+            display:"inlineBlock",
+            border:"1px",
+            height:"30px",
+            lineHeight:"20px",
+            fontSize:"16px",
+            padding:"0px 4px 0px 4px",
+            margin:"0px"
+        }
+)
+(style.push ".leftButton" {
+           borderRadius:"6px 0px 0px 6px";
+        }
+)
+(style.push ".rightButton" {
+           borderRadius:"0px 6px 6px 0px";
+        }
+)
+
+(function (MyButton props)
+  <button 
+  className={(if (== props.isLeft true) "buttonClass leftButton" "buttonClass rightButton" )} 
+  style={ {backgroundColor: (if (== props.active true) "186|230|55|255" "190|120|120|255")} }>{props.name}</button>
+)
+
+(function (Header props)
+  <div className="headerConteiner">
+     <img src="./src/asset/tempLogo.png" style={{margin:"0px 0px 0px 10px",width:"50px",height:"50px"}}></img>
+     <div style={{height:"30px",lineHeight:"30px",fontSize:"16px",padding:"0px 20px 0px 0px"}}>
+      <span style={{margin:"0px 10px 0px 0px"}}>风格</span>
+      <MyButton name="浅色" isLeft={true} active={true} ></MyButton>
+      <MyButton name="深色" isLeft={false} active={false} ></MyButton>
+
+      <span style={{margin:"0px 10px 0px 30px"}}>语言</span>
+      <MyButton name="英文" isLeft={true} active={true} ></MyButton>
+      <MyButton name="中文" isLeft={false}  active={false} ></MyButton>
+
+      <span style={{margin:"0px 10px 0px 10px",width:"2px",height:"30px",backgroundColor:"0|0|0|255"}}></span>
+      <span >15-16-50</span>
+     </div>
+  </div>
+)
+
+(export {
+  Header:Header
+})

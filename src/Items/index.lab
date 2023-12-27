@@ -1,0 +1,35 @@
+(import store from "./src/store/index.lab")
+(import MyButton from "./src/Items/Button/index.lab")
+(import select from "./src/Items/Select/index.lab")
+(import Process from "./src/Items/Process/index.lab")
+(import TxtDemo from "./src/Items/TxtDemo/index.lab")
+(import CanvasTest from "./src/Items/Canvas/index.lab")
+(import Table from "./src/Items/Table/index.lab")
+(import CheckboxTest from "./src/Items/checkBox/index.lab")
+(import ImgTest from "./src/Items/ImgTest/index.lab")
+(import VideoAudio from "./src/Items/VideoAudio/index.lab")
+(import HttpTest from "./src/Items/http/index.lab")
+
+
+(function (ShowItems props)
+  (let storeState store.storeState)
+  (console.log "ShowItems:" storeState.ChooseIterm)
+  (cond
+        ((== storeState.ChooseIterm "button") <MyButton.Buttons></MyButton.Buttons>)
+        ((== storeState.ChooseIterm "select") <select.Selects></select.Selects>)
+        ((== storeState.ChooseIterm "CheckboxTest") <CheckboxTest.CheckboxTest></CheckboxTest.CheckboxTest>)
+        ((== storeState.ChooseIterm "ImgTest") <ImgTest.ImgTest></ImgTest.ImgTest>)
+        ((== storeState.ChooseIterm "txt") <TxtDemo.TxtDemo></TxtDemo.TxtDemo>)
+        ((== storeState.ChooseIterm "process") <Process.Process></Process.Process>)
+        ((== storeState.ChooseIterm "Canvas") <CanvasTest.CanvasTest></CanvasTest.CanvasTest>)
+        ((== storeState.ChooseIterm "table") <Table.Table></Table.Table>)
+        ((== storeState.ChooseIterm "VideoAudio") <VideoAudio.VideoAudio></VideoAudio.VideoAudio>)
+        ((== storeState.ChooseIterm "http") <HttpTest.HttpTest></HttpTest.HttpTest>)
+        
+        (else "other")
+  )
+)
+
+(export {
+  ShowItems:ShowItems
+})

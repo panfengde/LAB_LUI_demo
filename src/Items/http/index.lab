@@ -1,0 +1,19 @@
+(function (HttpTest props propsMethods)
+  (let state (propsMethods.initState {someTxt:"原始文字"}))
+  (propsMethods.afterMounted (lambda (x)
+    (let aHttpRequest (new HttpRequest))
+    (set aHttpRequest.method "get")
+    (set aHttpRequest.url "https://example.com")
+    (aHttpRequest.sendAsync (lambda (res ) 
+       (console.log state.someTxt "-asdfasdfasdfasdfasfa") 
+       (console.log res) 
+      )
+    )
+    )
+  )
+  <div>{state.someTxt}</div>
+)
+
+(export {
+  HttpTest:HttpTest
+})

@@ -1,0 +1,14 @@
+
+(function (CheckboxTest props)
+  <div >
+     <checkboxGroup >
+      <checkbox label="test1" value={1}></checkbox>
+      <checkbox label="test2" value={2}></checkbox>
+      <checkbox label="test3" value={3}></checkbox>
+    </checkboxGroup >
+  </div>
+)
+
+(export {
+  CheckboxTest:CheckboxTest
+})
