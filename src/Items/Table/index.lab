@@ -1,4 +1,4 @@
-(import xxx form "./src/macro/index.lab")
+(import _ form "macro")
 
 (style.push ".cell" {
      color: "225|225|90|255",

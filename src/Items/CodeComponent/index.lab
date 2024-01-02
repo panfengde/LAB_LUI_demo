@@ -1,4 +1,4 @@
-(import xxx form "./src/macro/index.lab")
+(import _ form "macro")
 
 (let codeComponentStyle (style.create {
             width:"100%",

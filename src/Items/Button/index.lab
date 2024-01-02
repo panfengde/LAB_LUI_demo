@@ -1,5 +1,5 @@
-(import CodeComponent from "./src/Items/CodeComponent/index.lab")
-
+(import CodeComponent from "../CodeComponent/index.lab")
+(import number from "number" "1.2.1")
 
 (let squareButtonStyle (style.create {
              margin:"12px",
@@ -7,7 +7,6 @@
              color:"255|255|255|255"
         }
 ))
-
 (style.push ".circleButton" {
              margin:"12px",
         }
@@ -20,10 +19,9 @@
         }
 ))
 (app.render <button className={squareButtonStyle}>方形按钮</button>)")
-
   <div >
     <div >矩形按钮</div>
-    <div >
+    <div>
         <button className="squareButton">方形按钮</button>
         <div style={{fontSize:"12px",height:"14px",margin:"10px 0px 0px 0px"}}>代码示例：</div>
         <CodeComponent.CodeComponent code={oneCode}></CodeComponent.CodeComponent>
