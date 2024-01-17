@@ -1,5 +1,5 @@
 (import CodeComponent from "../CodeComponent/index.lab")
-(import number from "number" "1.2.1")
+
 
 (let squareButtonStyle (style.create {
              margin:"12px",
@@ -19,6 +19,7 @@
         }
 ))
 (app.render <button className={squareButtonStyle}>方形按钮</button>)")
+
   <div >
     <div >矩形按钮</div>
     <div>

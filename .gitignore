@@ -1,0 +1,12 @@
+build
+.vscode
+cmake-build-debug
+cmake-build-default
+cmake-build-release
+.idea
+demo
+Document
+lib
+*.zip
+.DS_Store
+.DS_Store

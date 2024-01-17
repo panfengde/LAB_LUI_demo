@@ -11,11 +11,12 @@
 (define-syntax for
   (syntax-rules ()
             ((_ init condition iter ...)
-                (begin
+                ((lambda ()
                       init
                       (while condition
                             ...
                             iter
-                      )))))
+                      )))
+                      )))
 
 (export {})

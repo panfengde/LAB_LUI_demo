@@ -9,6 +9,7 @@
 (import ImgTest from "./ImgTest/index.lab")
 (import VideoAudio from "./VideoAudio/index.lab")
 (import HttpTest from "./http/index.lab")
+(import form from "./form/index.lab")
 
 
 (function (ShowItems props)
@@ -17,6 +18,7 @@
   (cond
         ((== storeState.ChooseIterm "button") <MyButton.Buttons></MyButton.Buttons>)
         ((== storeState.ChooseIterm "select") <select.Selects></select.Selects>)
+        ((== storeState.ChooseIterm "form") <form.FormDemo></form.FormDemo>)
         ((== storeState.ChooseIterm "CheckboxTest") <CheckboxTest.CheckboxTest></CheckboxTest.CheckboxTest>)
         ((== storeState.ChooseIterm "ImgTest") <ImgTest.ImgTest></ImgTest.ImgTest>)
         ((== storeState.ChooseIterm "txt") <TxtDemo.TxtDemo></TxtDemo.TxtDemo>)

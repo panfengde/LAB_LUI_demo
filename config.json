@@ -1,0 +1,12 @@
+{
+  "dependence": {
+    "macro": ["1.1.1","1.1.2"],
+    "string": ["1.1.1","1.1.2"]
+  },
+  "platformDependence": {
+    "windows": {
+      "arm64": {},
+      "x8664": {}
+    }
+  }
+}

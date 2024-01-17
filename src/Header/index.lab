@@ -18,10 +18,12 @@
             margin:"0px"
         }
 )
+
 (style.push ".leftButton" {
            borderRadius:"6px 0px 0px 6px";
         }
 )
+
 (style.push ".rightButton" {
            borderRadius:"0px 6px 6px 0px";
         }

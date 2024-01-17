@@ -6,9 +6,9 @@
 (import Items from "./src/Items/index.lab")
 
 (function (Go)
-  <div>12</div>
+  <div>12
+  </div>
 )
-
 (app.render 
   <Layout.Layout 
     header={Header.Header}
