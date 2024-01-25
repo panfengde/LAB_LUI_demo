@@ -10,7 +10,6 @@
         filePath
         savePath
         (lambda (x)
-
              (folderObj.rename (+ savePath "/" packageName)  (+ savePath "/" version))
              (folderObj.remove filePath)
         )

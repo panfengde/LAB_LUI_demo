@@ -33,18 +33,18 @@
          <img src="./src/asset/qwe.png" style={{margin:"0px 0px 0px 90px",width:"70px",height:"60px"}}></img>
       </div >
       <div className={oneRow}>
-        <span className={itemTxt}> 输入框./ </span>
-        <input style={{width:"200px"}}> </input >
+        <span className={itemTxt}> 输入框:</span>
+        <input style={{width:"200px"}}> </input>
       </div >
       <div className={oneRow}>
-        <span className={itemTxt}> 选择按钮 </span>
+        <span className={itemTxt}> 选择按钮: </span>
         <select style={{width:"200px"}}>
           <option value="1" label="one" >one</option >
           <option value="2" label="two" >two</option >
         </select >
       </div >
       <div className={oneRow}>
-        <span className={itemTxt}> 复选按钮 </span>
+        <span className={itemTxt}> 复选按钮: </span>
         <checkboxGroup style={{width:"200px"}}>
           <checkbox label="test1" value={1}></checkbox>
           <checkbox label="test2" value={2}></checkbox>

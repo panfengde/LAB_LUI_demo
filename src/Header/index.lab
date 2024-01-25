@@ -42,14 +42,12 @@
       <span style={{margin:"0px 10px 0px 0px"}}>风格</span>
       <MyButton name="浅色" isLeft={true} active={true} ></MyButton>
       <MyButton name="深色" isLeft={false} active={false} ></MyButton>
-
       <span style={{margin:"0px 10px 0px 30px"}}>语言</span>
       <MyButton name="英文" isLeft={true} active={true} ></MyButton>
       <MyButton name="中文" isLeft={false}  active={false} ></MyButton>
-
       <span style={{margin:"0px 10px 0px 10px",width:"2px",height:"30px",backgroundColor:"0|0|0|255"}}></span>
-      <span >15-16-50</span>
-     </div>
+      <span >15-16-50 </span>
+    </div>
   </div>
 )
 

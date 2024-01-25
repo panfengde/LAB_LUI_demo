@@ -11,10 +11,9 @@
 
 (app.render 
   <Layout.Layout 
-    header={Header.Header}
-    left={LeftPanel.LeftPanel}
-    right={Items.ShowItems}
-  >
+    header={Header.Header} 
+    left={LeftPanel.LeftPanel} 
+    right={Items.ShowItems}>
   </Layout.Layout>
 )
 

@@ -27,11 +27,12 @@
         },
     }
 )
-
+(let showTxt "pple")
+(let numbers 10)
 
 (function (Cell props)
     <div className="cell">
-        <div className={(if (== props.row 1) "oneBlock" "")}>{props.row}</div>
+        <div className={(if (== props.row 1) "oneBlock" "")}>{showTxt}</div>
     </div>
 )
 
@@ -45,7 +46,7 @@
 
 (function (Row props)
     (let data [])
-    (for (let i 0) (less i 10) (+= i 1)
+    (for (let i 0) (less i numbers) (+= i 1)
         (data.push <Cell row={props.row}></Cell>)
     )
     <div className="row">
@@ -60,9 +61,14 @@
      overflow:"scroll",
 })
 
-(function (Table props)
+
+(function (Table props propsMethods)
     (let rows [])
-    (for (let i 0) (less i 30) (+= i 1)
+    (propsMethods.afterMounted (lambda () 
+        (set showTxt "new")
+        (set numbers 20)
+    ))
+    (for (let i 0) (less i numbers) (+= i 1)
          (rows.push <Row row={i}></Row>)
     )
     (console.log  "table----" )
@@ -70,6 +76,8 @@
        {rows}
     </div>
 )
+
+
 
 
 (export {
