@@ -7,9 +7,9 @@
 ))
 
 (let oneRow (style.create {
-            color:"127|190|219|255"
-            fontSize:"18px",
-            lineHeight:"18px"
+            color:"127|190|219|255",
+            fontSize:"12px",
+            lineHeight:"12px"
         }
 ))
 
