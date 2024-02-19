@@ -1,0 +1,20 @@
+(import MainShow from "./Main/Mainshow.lab")
+(import LUIPart from "./LUIPart/index.lab")
+
+
+(let LUIPageStyle (style.create  {
+    width:"100%",
+    height:"100%"
+}))
+
+
+(function (Home props)
+  <div className={LUIPageStyle}>
+      <MainShow.MainShow></MainShow.MainShow>
+      <LUIPart.LUIPart></LUIPart.LUIPart>
+  </div>
+)
+
+(export {
+   Home:Home
+})

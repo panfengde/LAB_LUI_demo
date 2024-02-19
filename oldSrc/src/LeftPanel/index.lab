@@ -23,6 +23,8 @@
 
 (function (ChooseIterm props)
    (let theName (if (== store.storeState.ChooseIterm props.item)  leftPanelChoosed leftPanelChoose))
+
+   
    (console.log props.itemName theName)
     <div className={theName} 
      onClick={(lambda () 

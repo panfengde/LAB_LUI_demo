@@ -1,0 +1,50 @@
+(let MainShowStyle (style.create  {
+    width:"100%",
+    height:"300px",
+    display:"flex",
+    flexDirection:"column",
+    alignItems:"alignCenter",
+    backgroundColor:"35|39|47|255",
+    padding:"20px",
+}))
+
+(let item (style.create  {
+    fontSize:"20px",
+    height:"22px",
+}))
+
+(let MybuttonStyle (style.create  {
+    display:"inlineBlock",
+    padding:"15px 20px 15px 20px",
+    height:"50px",
+    borderRadius:"20px",
+    backgroundColor:"39|126|164|255",
+    margin:"0px 10px 0px 10px",
+}))
+
+(style.push (+ "." MybuttonStyle ":hover") {
+   backgroundColor:"39|126|164|205"
+})
+
+(function (Mybutton props)
+    <button className={MybuttonStyle}>{props.children}</button>
+)
+
+(function (MainShow props)
+    <div className={MainShowStyle}>
+        <img src="./src/asset/logo.png" style={{width:"60px",height:"60px"}}></img>
+        <div style={{fontSize:"30px",height:"40px",margin:"0px 0px 10px 0px"}} >LUI/LAB</div>
+        <div style={{fontSize:"18px",height:"29px"}} >在简单易用基础上追求性能的Lisp方言</div>
+        <div style={{fontSize:"18px",height:"29px"}} >构建跨终端且易用的程序平台</div>
+        <div style={{fontSize:"18px",height:"29px"}} >专注于让开源项目盈利的平台</div>
+        <div>
+            <Mybutton>学习文档</Mybutton>
+            <Mybutton>接口文档</Mybutton>
+        </div>
+    </div>
+)
+
+
+(export {
+  MainShow:MainShow 
+})

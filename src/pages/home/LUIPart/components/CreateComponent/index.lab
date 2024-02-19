@@ -1,0 +1,56 @@
+(import CodeComponent from "../../../../../container/CodeComponent/index.lab")
+(import aCode from "./aCode.lab")
+(import ImgBox from "../ImgBox/index.lab")
+
+(let UseComponentStyle (style.create  {
+    width:"100%",
+    height:"380px",
+    display:"flex",
+    padding:"50px",
+    flexDirection:"column",
+    alignItems:"alignCenter",
+  
+}))
+
+
+(let MybuttonStyle (style.create  {
+    display:"inlineBlock",
+    padding:"15px 20px 15px 20px",
+    height:"50px",
+    borderRadius:"20px",
+    backgroundColor:"39|126|164|255",
+    margin:"0px 10px 0px 10px",
+    
+}))
+
+(style.push (+ "." MybuttonStyle ":hover") {
+   backgroundColor:"39|126|164|205"
+})
+
+(function (Mybutton props)
+    <button className={MybuttonStyle}>{props.children}</button>
+)
+
+
+(function (UseComponent props)
+    <div className={UseComponentStyle}>
+        <div style={{fontSize:"24px",margin:"10px 0px 20px 0px"}} >创建ImgBox组件</div>
+        <div style={{display:"flex",width:"1100px",alignItems:"alignCenter",justifyContent:"spaceBetween",height:"16px"}}>
+                <div>代码</div>
+                <div>渲染结果</div>
+        </div>
+        <div style={{display:"flex",alignItems:"alignCenter",justifyContent:"center",width:"1100px"}} >
+            <div style={{width:"50%"}} >
+                <CodeComponent.CodeComponent code={aCode.codeString} ></CodeComponent.CodeComponent >
+            </div>
+            <div style={{width:"50%",backgroundColor:"26|56|80|255",height:"100%"}} >
+                <ImgBox.ImgBox logSrc="./src/asset/cute1.png" tilte="标题一" describle="一些描述"></ImgBox.ImgBox>
+            </div>
+        </div>
+    </div>
+)
+
+
+(export {
+  CreateComponent:UseComponent 
+})

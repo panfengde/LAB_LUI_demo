@@ -1,14 +1,22 @@
 (import CodeComponent from "../CodeComponent/index.lab")
 
 (function (HttpTest props propsMethods)
-  (let state (propsMethods.initState {someTxt:"原始文字"}))
+  (let state (propsMethods.initState 
+      {
+        someTxt:"原始文字",
+        setState:(lambda (key value) 
+                        (set (get state key) value)
+                        (propsMethods.update ))
+      }
+    )
+  )
+
   (propsMethods.afterMounted (lambda (x)
     (let aHttpRequest (new HttpRequest))
     (set aHttpRequest.method "get")
     (set aHttpRequest.url "https://example.com")
-    (aHttpRequest.sendAsync (lambda (res ) 
-       (set state.someTxt res.body)
-       (propsMethods.update)
+    (aHttpRequest.sendAsync (lambda (res) 
+       (state.setState "someTxt" res.body )
       )
     )
     )

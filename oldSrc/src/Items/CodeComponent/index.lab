@@ -1,0 +1,51 @@
+(import _ form "macro")
+
+(let codeComponentStyle (style.create {
+            width:"100%",
+            backgroundColor: "50|50|90|255",
+            padding:"10px"
+        }
+))
+
+(let oneRow (style.create {
+            color:"255|255|255|255",
+            fontSize:"14px",
+            lineHeight:"16px"
+        }
+))
+
+
+(function (CodeComponent props)
+  (let code props.code)
+  (let codeRows [])
+  (let oneCodeRow "")
+  (let wrapFlag "
+")
+
+  (for (let i 0) (less  i code.length) (+= i 1)
+      (if (== code[i] wrapFlag)
+          (begin 
+            (codeRows.push oneCodeRow)
+            (set oneCodeRow "")
+          )
+          (begin
+            (+= oneCodeRow code[i])
+          )
+      )
+  )
+
+  (let showRows [])
+  
+  (for (let k 0) (less k codeRows.length) (+= k 1)
+    (let oneRowCode codeRows[k])
+    (showRows.push  <div className={oneRow}>{oneRowCode}</div>)
+  )
+  <div className={codeComponentStyle}>
+      {showRows}
+  </div>
+)
+
+
+(export {
+  CodeComponent:CodeComponent
+})

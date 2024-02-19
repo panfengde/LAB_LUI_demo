@@ -1,0 +1,38 @@
+(let LayoutStyle (style.create  {
+    width:"100%",
+    height:"100%",
+    backgroundColor: "35|39|47|255",
+    display:"flex",
+    flexDirection:"column",
+    color:"246|247|249|255"
+}))
+
+(let HeaderStyle (style.create  {
+    width:"100%",
+    height:"65px",
+    border:"0px 0px 1px 0px"
+}))
+
+(let LayoutContent (style.create  {
+    width:"100%",
+    flexGrow :"1",
+    overflow:"scroll"
+}))
+
+
+
+ (function (Layout props)
+  <div className={LayoutStyle}>
+    <div className={HeaderStyle}>
+      <props.header></props.header>
+    </div>
+    <div className={LayoutContent} >
+       <props.content></props.content>
+    </div>
+  </div>
+ )
+
+(console.log "layout----------------------")
+ (export {
+  Layout:Layout
+})

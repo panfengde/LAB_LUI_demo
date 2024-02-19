@@ -1,22 +1,22 @@
-(import _ form "macro")
-
 (let codeComponentStyle (style.create {
             width:"100%",
-            backgroundColor: "50|50|90|255",
-            padding:"10px"
+            backgroundColor: "23|24|29|255",
+            padding:"10px",
+          
         }
 ))
 
 (let oneRow (style.create {
-            color:"255|255|255|255",
-            fontSize:"14px",
-            lineHeight:"16px"
+            color:"127|190|219|255"
+            fontSize:"18px",
+            lineHeight:"18px"
         }
 ))
 
 
 (function (CodeComponent props)
   (let code props.code)
+  
   (let codeRows [])
   (let oneCodeRow "")
   (let wrapFlag "
@@ -33,16 +33,18 @@
           )
       )
   )
-  (if (== oneCodeRow.length 0)
-    (console.log "-")
-    (codeRows.push oneCodeRow)
+  (if (more oneCodeRow.length 0)
+      (codeRows.push oneCodeRow)
+      (console.log "else")
   )
 
   (let showRows [])
+  (console.log "----------------" codeRows.length codeRows)
   (for (let k 0) (less k codeRows.length) (+= k 1)
     (let oneRowCode codeRows[k])
-    (showRows.push  <div className={oneRow}>{ oneRowCode }</div>)
+    (showRows.push  <div className={oneRow}>{oneRowCode}</div>)
   )
+  (console.log "----------------" showRows)
   <div className={codeComponentStyle}>
       {showRows}
   </div>

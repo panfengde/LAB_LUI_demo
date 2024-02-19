@@ -1,0 +1,33 @@
+(let ImgBoxStyle (style.create  {
+    margin:"15px 0px 10px 0px",
+    display:"flex",
+    alignItems:"alignCenter",
+    padding:"10px",
+    backgroundColor:"255|255|255|255"
+}))
+
+(let titleStyle (style.create  {
+    color:"20|20|20|255",
+    fontSize:"16px",
+    height:"20px",
+}))
+
+(let describleStyle (style.create  {
+    color:"120|120|120|255",
+    fontSize:"12px",
+    lineHeight:"16px",
+}))
+
+(function (ImgBox props)
+    <div className={ImgBoxStyle} >
+        <img src={props.logSrc} style={{width:"40px",height:"40px",margin:"0px 15px 0px 0px"}}></img>
+        <div style={{display:"inlineBlock",flexGrow:"1"}}>
+            <div className={titleStyle}>{props.tilte}</div>
+            <div className={describleStyle}>{props.describle}</div>
+        </div>
+    </div>
+)
+
+(export {
+  ImgBox:ImgBox
+})

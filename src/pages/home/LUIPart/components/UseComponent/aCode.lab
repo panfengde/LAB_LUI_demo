@@ -1,0 +1,14 @@
+
+
+(let codeString "//组件组合形成页面
+(app.render 
+    <div>
+        <ImgBox  log=\"img1.png\"   title={\"标题一\"}  describe={\"一些描述\"} ></ImgBox>
+        <ImgBox  log=\"img2.png\"   title={\"标题二\"}  describe={\"一些描述\"} ></ImgBox>
+        <ImgBox  log=\"img3.png\"   title={\"标题三\"}  describe={\"一些描述\"} ></ImgBox>
+    </div>
+)")
+
+(export {codeString:codeString})
+
+

@@ -1,0 +1,32 @@
+(import CreateComponent from "./components/CreateComponent/index.lab")
+(import UseComponent from "./components/UseComponent/index.lab")
+
+(let LUIPartStyle (style.create  {   
+    backgroundColor:"25|29|34|255"
+}))
+
+(let LUIPartIntroduceStyle (style.create  {   
+    width:"100%",
+    height:"60px",
+    display:"flex",
+    padding:"20px",
+    flexDirection:"column",
+    alignItems:"alignCenter",
+    margin:"0px 0px 10px 0px"
+}))
+
+(function (LUIPart props)
+  <div className={LUIPartStyle}>
+    <div className={LUIPartIntroduceStyle}>
+        <div style={{fontSize:"30px",height:"35px",letterSpacing:"4px",margin:"0px 0px 10px 0px"}} >构建界面</div>
+        <div style={{fontSize:"16px",height:"22px"}} >你可以使用LAB语言，像流行的React框架一样创建组件，并构建界面。</div>
+    </div>
+    <CreateComponent.CreateComponent></CreateComponent.CreateComponent>
+    <UseComponent.UseComponent></UseComponent.UseComponent>
+  </div>
+)
+
+(export {
+   LUIPart:LUIPart
+})
+

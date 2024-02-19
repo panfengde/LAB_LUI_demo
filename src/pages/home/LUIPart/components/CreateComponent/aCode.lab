@@ -1,0 +1,24 @@
+
+
+(let codeString "//声明样式规则
+(let ImgBoxStyle (style.create  {display:flex, alignItems:alignCenter}))
+
+//创建ImgBox组件
+( function (ImgBox props)
+    <div className={ImgBoxStyle} >
+        <img src={props.log}></img>
+        <div>
+            <div>{props.tilte}<div>
+            <div>{props.describe}<div>
+        <div>
+    </div>
+)
+
+//渲染一个ImgBox组件
+(app.render <ImgBox  log=\"img1.png\"   title={\"标题一\"}  describe={\"一些描述\"} ></ImgBox> )
+")
+
+
+(export {codeString:codeString})
+
+
