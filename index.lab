@@ -1,24 +1,23 @@
 (import _ form "macro")
-(import Layout from "./src/container/Layout/index.lab")
-(import Header from "./src/container/Header/index.lab")
-(import Home from "./src/pages/home/index.lab")
+(import {Layout} from "./src/container/Layout/index.lab")
+(import {Header} from "./src/container/Header/index.lab")
+(import {Home} from "./src/pages/home/index.lab")
 
 (function (Go)
   <div>12</div>
 )
 // (app.render 
-//   <Layout.Layout  
-//   >
-//   </Layout.Layout>
+//   <div  >1
+//   </div>
 // )
 
 
 (app.render 
-  <Layout.Layout  
-    header={Header.Header}
-    content={Home.Home}
+  <Layout  
+    header={Header}
+    content={Home}
   >
-  </Layout.Layout>
+  </Layout>
 )
 
 

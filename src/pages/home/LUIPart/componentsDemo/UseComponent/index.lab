@@ -1,15 +1,14 @@
-(import CodeComponent from "../../../../../container/CodeComponent/index.lab")
-(import aCode from "./aCode.lab")
-(import ImgBox from "../ImgBox/index.lab")
+(import {CodeComponent} from "../../../../../container/CodeComponent/index.lab")
+(import {ImgBox} from "../ImgBox/index.lab")
+(import {codeString} from "./aCode.lab")
 
 (let UseComponentStyle (style.create  {
     width:"100%",
-    height:"380px",
+    height:"470px",
     display:"flex",
     padding:"50px",
     flexDirection:"column",
     alignItems:"alignCenter",
-  
 }))
 
 
@@ -34,17 +33,19 @@
 
 (function (UseComponent props)
     <div className={UseComponentStyle}>
-        <div style={{fontSize:"24px",margin:"10px 0px 20px 0px"}} >创建ImgBox组件</div>
+        <div style={{fontSize:"24px",margin:"10px 0px 20px 0px"}} >使用ImgBox组件，组合形成页面</div>
         <div style={{display:"flex",width:"1100px",alignItems:"alignCenter",justifyContent:"spaceBetween",height:"16px"}}>
                 <div>代码</div>
                 <div>渲染结果</div>
         </div>
-        <div style={{display:"flex",alignItems:"alignCenter",justifyContent:"center",width:"1100px"}} >
-            <div style={{width:"50%"}} >
-                <CodeComponent.CodeComponent code={aCode.codeString} ></CodeComponent.CodeComponent >
+        <div style={{display:"flex",alignItems:"alignCenter",justifyContent:"center",width:"1100px",height:"300px"}} >
+            <div style={{width:"50%",height:"100%"}} >
+                <CodeComponent code={codeString} ></CodeComponent >
             </div>
             <div style={{width:"50%",backgroundColor:"26|56|80|255",height:"100%"}} >
-                <ImgBox.ImgBox logSrc="./src/asset/cute1.png" tilte="标题一" describle="一些描述"></ImgBox.ImgBox>
+                <ImgBox logSrc="./src/asset/cute1.png" tilte="标题一" describle="一些描述"></ImgBox>
+                <ImgBox logSrc="./src/asset/cute2.png" tilte="标题二" describle="一些描述"></ImgBox>
+                <ImgBox logSrc="./src/asset/cute3.png" tilte="标题三" describle="一些描述"></ImgBox>
             </div>
         </div>
     </div>
@@ -52,5 +53,5 @@
 
 
 (export {
-  CreateComponent:UseComponent 
+  UseComponent:UseComponent 
 })

@@ -1,5 +1,5 @@
-(import MainShow from "./Main/Mainshow.lab")
-(import LUIPart from "./LUIPart/index.lab")
+(import {MainShow} from "./Main/Mainshow.lab")
+(import {LUIPart} from "./LUIPart/index.lab")
 
 
 (let LUIPageStyle (style.create  {
@@ -10,11 +10,11 @@
 
 (function (Home props)
   <div className={LUIPageStyle}>
-      <MainShow.MainShow></MainShow.MainShow>
-      <LUIPart.LUIPart></LUIPart.LUIPart>
+      <MainShow></MainShow>
+      <LUIPart></LUIPart>
   </div>
 )
 
 (export {
-   Home:Home
+   Home
 })

@@ -20,7 +20,6 @@
 }))
 
 
-
  (function (Layout props)
   <div className={LayoutStyle}>
     <div className={HeaderStyle}>
@@ -33,6 +32,7 @@
  )
 
 (console.log "layout----------------------")
- (export {
-  Layout:Layout
+
+(export {
+  Layout
 })

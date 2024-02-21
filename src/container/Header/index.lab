@@ -55,5 +55,5 @@
 (console.log "Header----------------------")
 
  (export {
-  Header:Header
+  Header
 })

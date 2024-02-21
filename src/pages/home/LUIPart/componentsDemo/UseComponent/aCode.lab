@@ -9,6 +9,6 @@
     </div>
 )")
 
-(export {codeString:codeString})
+(export {codeString})
 
 

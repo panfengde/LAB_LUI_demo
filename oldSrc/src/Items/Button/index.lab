@@ -28,7 +28,7 @@
     <div>
         <button className="squareButton">方形按钮</button>
         <div style={{fontSize:"12px",height:"14px",margin:"10px 0px 0px 0px"}}>代码示例：</div>
-        <CodeComponent.CodeComponent code={oneCode}></CodeComponent.CodeComponent>
+        <CodeComponent code={oneCode}></CodeComponent>
     </div>
     
     <div >圆形按钮</div>
