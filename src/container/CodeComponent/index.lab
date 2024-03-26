@@ -39,12 +39,12 @@
   )
 
   (let showRows [])
-  (console.log "----------------" codeRows.length codeRows)
+
   (for (let k 0) (less k codeRows.length) (+= k 1)
     (let oneRowCode codeRows[k])
     (showRows.push  <div className={oneRow}>{oneRowCode}</div>)
   )
-  (console.log "----------------" showRows)
+
   <div className={codeComponentStyle}>
       {showRows}
   </div>

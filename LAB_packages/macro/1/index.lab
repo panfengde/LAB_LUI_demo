@@ -19,4 +19,8 @@
                       )))
                       )))
 
+(define-syntax isUndefined
+    (syntax-rules ()
+                    ((_ ...) (== (type ...) "undefined"))))
+
 (export {})

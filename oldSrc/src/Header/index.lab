@@ -36,7 +36,7 @@
 )
 
 (function (Header props)
-  <div className="headerConteiner">
+  <div className="headerConteiner"> 。   
      <img src="./src/asset/tempLogo.png" style={{margin:"0px 0px 0px 10px",width:"50px",height:"50px"}}></img>
      <div style={{height:"30px",lineHeight:"30px",fontSize:"16px",padding:"0px 20px 0px 0px"}}>
       <span style={{margin:"0px 10px 0px 0px"}}>风格</span>

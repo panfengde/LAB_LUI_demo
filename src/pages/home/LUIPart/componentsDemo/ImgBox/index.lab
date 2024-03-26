@@ -18,12 +18,12 @@
     lineHeight:"16px",
 }))
 
-(function (ImgBox props)
+(function (ImgBox {logSrc,tilte,describle} method)
     <div className={ImgBoxStyle} >
-        <img src={props.logSrc} style={{width:"40px",height:"40px",margin:"0px 15px 0px 0px"}}></img>
+        <img src={logSrc} style={{width:"40px",height:"40px",margin:"0px 15px 0px 0px"}}></img>
         <div style={{display:"inlineBlock",flexGrow:"1"}}>
-            <div className={titleStyle}>{props.tilte}</div>
-            <div className={describleStyle}>{props.describle}</div>
+            <div className={titleStyle}>{tilte}</div>
+            <div className={describleStyle}>{describle}</div>
         </div>
     </div>
 )

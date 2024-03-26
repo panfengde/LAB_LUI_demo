@@ -7,10 +7,14 @@
   <div>12</div>
 )
 // (app.render 
-//   <div  >1
+//   <div>1
 //   </div>
 // )
 
+// (if (isUndefined undefined)
+//     (console.log "xx-------")
+//     (console.log "pp-------")
+// )
 
 (app.render 
   <Layout  
@@ -19,6 +23,7 @@
   >
   </Layout>
 )
+
 
 
 ;;/Users/panfeng/coder/myProject/LUI/cmake-build-release/LUI.app/Contents/MacOS/LUI /Users/panfeng/Desktop/Document/index.lab

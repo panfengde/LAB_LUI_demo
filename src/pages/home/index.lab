@@ -1,19 +1,44 @@
 (import {MainShow} from "./Main/Mainshow.lab")
 (import {LUIPart} from "./LUIPart/index.lab")
 
-
 (let LUIPageStyle (style.create  {
     width:"100%",
     height:"100%"
 }))
 
+(function (HttpTest props propsMethods)
+  (let state (propsMethods.initState 
+      {
+        someTxt:"原始文字",
+        setState:(lambda (key value) 
+                        (set (get state key) value)
+                        (propsMethods.update ))
+      }
+    )
+  )
+  
+  (propsMethods.afterMounted (lambda (x)
+      (let aHttpRequest (new HttpRequest))
+      (set aHttpRequest.method "get")
+      (set aHttpRequest.url "https://example.com")
+      (aHttpRequest.sendAsync (lambda ({body}) 
+        (state.setState "someTxt" body )
+        )
+      )
+    )
+  )
+
+  <div>{state.someTxt}</div>
+)
 
 (function (Home props)
   <div className={LUIPageStyle}>
       <MainShow></MainShow>
       <LUIPart></LUIPart>
+      <HttpTest></HttpTest>
   </div>
 )
+
 
 (export {
    Home
