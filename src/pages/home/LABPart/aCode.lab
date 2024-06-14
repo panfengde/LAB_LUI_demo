@@ -1,0 +1,51 @@
+
+
+(let codeString "
+(let aString \"hello world\") //定义一个aString变量
+
+//定义一个sayHello函数
+(function (sayHello param) 
+    (console.log param)
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+、
+
+(sayHello aString)  //使用sayHello函数
+")
+
+
+(export {codeString})
+
+

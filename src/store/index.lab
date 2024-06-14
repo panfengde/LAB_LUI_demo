@@ -1,0 +1,11 @@
+(let storeState {
+  type:"home"   //"home",//"serve"
+})
+
+(function (changeType value) {
+    (set storeState.type value)
+    (app.update )
+  }
+)
+
+(export {storeState:storeState,changeType:changeType})

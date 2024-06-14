@@ -1,0 +1,50 @@
+(import {CodeComponent} from "../../../container/CodeComponent/index.lab")
+(import {codeString} from "./aCode.lab")
+
+(let LABPartStyle (style.create  {   
+    padding:"10px",
+    backgroundColor:"25|29|34|255",
+    height:"250px",
+}))
+
+
+(let LABFlexStyle (style.create  {   
+   display:"flex",
+   alignItems:"alignCenter",
+   justifyContent:"center",
+   width:"100%",
+   height:"200px",
+}))
+
+(let LabPartIntroduceStyle (style.create  {   
+    width:"400px",
+    height:"170px",
+    display:"flex",
+    padding:"20px",
+    flexDirection:"column",
+    alignItems:"alignCenter",
+    justifyContent:"center",
+    
+}))
+
+(function (LABPart props)
+  <div className={LABPartStyle}>
+  <div style={{fontSize:"30px",height:"35px",letterSpacing:"4px",margin:"0px 0px 10px 0px", display:"flex",justifyContent:"center",}} ><span>语言介绍</span></div>
+    <div className={LABFlexStyle}>
+      <div className={LabPartIntroduceStyle}>
+        <div style={{fontSize:"16px",height:"22px"}} >一旦你接受了S表达式的括号</div>
+        <div style={{fontSize:"16px",height:"22px"}} >你就打开了编程语言的大门,远离了语法的掣肘。</div>
+        <div style={{fontSize:"16px",height:"22px"}} >你就能感受到，代码即数据，数据即代码。</div>
+        <div style={{fontSize:"16px",height:"22px"}} >它只有一个语法:( 操作符 参数1  参数2  ...)</div>
+      </div>
+      <div style={{width:"400px",height:"170px"}} >
+        <CodeComponent code={codeString} ></CodeComponent >
+      </div>
+    </div>
+  </div>
+)
+
+(export {
+   LABPart
+})
+

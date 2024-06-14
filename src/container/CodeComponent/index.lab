@@ -1,17 +1,59 @@
+(import _ form "macro")
 (let codeComponentStyle (style.create {
             width:"100%",
             backgroundColor: "23|24|29|255",
-            padding:"10px",
-          
+            padding:"10px", 
         }
 ))
 
 (let oneRow (style.create {
             color:"127|190|219|255",
-            fontSize:"12px",
-            lineHeight:"12px"
+            fontSize:"13px",
+            height:"14px",
+            lineHeight:"14px"
         }
 ))
+
+
+
+(function (sliceCode str)
+  (let sliceChar "(" )
+  (let result [])
+  (let temp "")
+  (let isOperate false)
+  (for (let i 0) (less i str.length) (+= i 1)
+
+      (if (==  str[i]  sliceChar )
+          (begin
+            (set isOperate true)
+            (+= temp str[i])
+            (result.push temp)
+            (set temp "")
+          )
+          (begin
+            (if isOperate
+                (begin
+                  (if (&& (== str[i]  " ") (!= temp.length 0))
+                      (begin
+                        (result.push <span style={{color:"246|48|81|255"}}>{(+ " " temp " ")}</span>)
+                        (set temp "")
+                        (set isOperate false)
+                      )
+                      (+= temp str[i])
+                  )
+                )
+                (+= temp str[i])
+            )
+          )
+      )
+  )
+
+  (if isOperate
+      (result.push <span style={{color:"255|0|0|255"}}> {temp} </span>)
+      (result.push temp)
+  )
+  result
+)
 
 
 (function (CodeComponent props)
@@ -42,7 +84,7 @@
 
   (for (let k 0) (less k codeRows.length) (+= k 1)
     (let oneRowCode codeRows[k])
-    (showRows.push  <div className={oneRow}>{oneRowCode}</div>)
+    (showRows.push  <div className={oneRow}>{(sliceCode oneRowCode)}</div>)
   )
 
   <div className={codeComponentStyle}>

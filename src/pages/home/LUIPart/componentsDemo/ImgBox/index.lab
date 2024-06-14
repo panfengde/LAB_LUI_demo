@@ -10,6 +10,8 @@
     color:"20|20|20|255",
     fontSize:"16px",
     height:"20px",
+    border:"1px solid red",
+    borderRadius:"5px"
 }))
 
 (let describleStyle (style.create  {
@@ -18,12 +20,12 @@
     lineHeight:"16px",
 }))
 
-(function (ImgBox {logSrc,tilte,describle} method)
+(function (ImgBox props method)
     <div className={ImgBoxStyle} >
-        <img src={logSrc} style={{width:"40px",height:"40px",margin:"0px 15px 0px 0px"}}></img>
+        <img src={props.logSrc} style={{width:"40px",height:"40px",margin:"0px 15px 0px 0px"}}></img>
         <div style={{display:"inlineBlock",flexGrow:"1"}}>
-            <div className={titleStyle}>{tilte}</div>
-            <div className={describleStyle}>{describle}</div>
+            <div className={titleStyle}>{props.tilte}</div>
+            <div className={describleStyle}>{props.describle}</div>
         </div>
     </div>
 )

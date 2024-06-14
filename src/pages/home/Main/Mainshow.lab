@@ -34,9 +34,9 @@
     <div className={MainShowStyle}>
         <img src="./src/asset/logo.png" style={{width:"60px",height:"60px"}}></img>
         <div style={{fontSize:"30px",height:"40px",margin:"0px 0px 10px 0px"}} >LUI/LAB</div>
-        <div style={{fontSize:"18px",height:"29px"}} >在简单易用基础上追求性能的Lisp方言</div>
-        <div style={{fontSize:"18px",height:"29px"}} >构建跨终端且易用的程序平台</div>
-        <div style={{fontSize:"18px",height:"29px"}} >专注于让开源项目盈利的平台</div>
+        <div style={{fontSize:"18px",height:"29px"}} >从零编写的采用S表达式的新编程语言</div>
+        <div style={{fontSize:"18px",height:"29px"}} >从零编写的图形与布局引擎</div>
+        <div style={{fontSize:"18px",height:"29px"}} >从零编写的通用程序平台</div>
         <div>
             <Mybutton>学习文档</Mybutton>
             <Mybutton>接口文档</Mybutton>

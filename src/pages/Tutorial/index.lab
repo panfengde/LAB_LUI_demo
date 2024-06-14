@@ -1,0 +1,85 @@
+(import {Collapse} from "../../components/Collapse/index.lab")
+(import {Menu} from "../../components/Menu/index.lab")
+
+(let TutorialStyle (style.create  {
+      width:"100%",
+      height:"100%",
+      display:"flex",
+  }))
+(let TutorialMenuBox (style.create  {
+      width:"300px",
+      height:"100%",
+      padding:"20px",
+  }))
+
+(let TutorialContentStyle (style.create  {
+    flexGrow:"1",
+    height:"100%",
+    padding:"20px",
+    border:"1px",
+  }))
+(let TutorialContentMenuBox (style.create  {
+    width:"300px",
+    height:"100%",
+    padding:"20px",
+  }))
+  
+
+
+(let UIMenu [
+      {label:"Collapse折叠面板",key:"1",children:<div>对复杂区域进行分组和隐藏，保持页面的整洁。手风琴 是一种特殊的折叠面板，只允许单个内容区域展开。</div>},
+      {label:"Alert警告提示",key:"2",children:<div>警告提示，展现需要关注的信息。</div>},
+      {label:"Drawer抽屉",key:"3",children:<div>屏幕边缘滑出的浮层面板。</div>},
+    ])
+
+(let ServeMenu [
+  {label:"Collapse折叠面板",key:"1",children:<div>对复杂区域进行分组和隐藏，保持页面的整洁。手风琴 是一种特殊的折叠面板，只允许单个内容区域展开。</div>},
+  {label:"Alert警告提示",key:"2",children:<div>警告提示，展现需要关注的信息。</div>},
+  {label:"Drawer抽屉",key:"3",children:<div>屏幕边缘滑出的浮层面板。</div>},
+])
+
+
+
+
+(function (Tutorial props propMethod)
+  (let state (propMethod.initState {
+      content:undefined,
+      setState:(lambda (key x)
+        (set state[key] x)
+        (propMethod.update )
+      )
+    }
+  ))
+
+  (let action (propMethod.initState {
+      changeContent:(lambda (newContent)
+        (state.setState  "content" newContent)
+      )
+    }
+  ))
+
+  (let memus (propMethod.initState {
+      TopMemu:[
+        {label:"UI",key:"1",children: <Menu onChange={action.changeContent} data={UIMenu}></Menu>},
+        {label:"serve",key:"2",children:<Menu onChange={action.changeContent} data={ServeMenu}></Menu>},
+      ],
+      setState:(lambda (key x)
+        (set state[key] x)
+        (propMethod.update )
+      )
+    }
+  ))
+
+  <div className={TutorialStyle}>
+      <div className={TutorialMenuBox}>
+        <Collapse data={memus.TopMemu} ></Collapse>
+      </div>
+      <div className={TutorialContentStyle}>{state.content}</div >
+  </div>
+)
+
+// <div className={TutorialContentMenuBox}>
+//   <Collapse data={AllMenu}></Collapse>
+// </div>
+
+(export {Tutorial})

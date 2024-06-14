@@ -1,3 +1,5 @@
+(import {changeType} from "../../store/index.lab")
+
 (let HeaderStyle (style.create  {
     width:"100%",
     height:"100%",
@@ -24,7 +26,6 @@
 }))
 
 
-
 (let inputMenuStyle (style.create  {
     width:"300px",
     height:"30px",
@@ -44,9 +45,11 @@
      </div>
      <div className={menuBoxStyle}>
         <input className={inputMenuStyle}></input>
-        <div>教程</div>
-        <div>示例</div>
-        <div>API文档</div>
+        <div onClick={(lambda () (changeType "home"))}>主页</div>
+        <div onClick={(lambda () (changeType "serve"))}>界面示例</div>
+        //<div onClick={(lambda () (changeType "test"))}>服务示例</div>
+        <div onClick={(lambda () (changeType "tutorial"))}>教程</div>
+        <div onClick={(lambda () (changeType "third"))}>API文档</div>
         <div>等等</div>
      </div>
   </div>

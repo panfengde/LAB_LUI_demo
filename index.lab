@@ -1,11 +1,45 @@
 (import _ form "macro")
 (import {Layout} from "./src/container/Layout/index.lab")
 (import {Header} from "./src/container/Header/index.lab")
-(import {Home} from "./src/pages/home/index.lab")
+(import {Router} from "./src/router/index.lab")
 
-(function (Go)
-  <div>12</div>
-)
+(let LUIPageStyle (style.create  {
+    width:"100%",
+    height:"100%"
+}))
+
+// (function (LUIPage props propsMethods)
+//   (let state ( propsMethods.initState  {
+//             firstType:true,
+//             changeAction:(lambda ()
+//                  (if state.firstType
+//                    (begin
+//                        (set state.firstType false)
+//                        (console.log "-----1")
+//                        (propsMethods.update)
+//                    )
+//                    (begin
+//                        (set state.firstType true)
+//                        (console.log "-----2")
+//                        (propsMethods.update)
+//                    )
+//                 )
+//             )
+//     })
+//   )
+
+//    <div className={LUIPageStyle}>
+//          <button onClick={state.changeAction}>change</button>
+//          {(if state.firstType
+//               <Layout  
+//                   header={Header}
+//                   content={Content}
+//               ></Layout>
+//               <span>5566 </span>
+//          )}
+//    </div>
+// )
+
 // (app.render 
 //   <div>1
 //   </div>
@@ -16,15 +50,20 @@
 //     (console.log "pp-------")
 // )
 
+
+
 (app.render 
   <Layout  
     header={Header}
-    content={Home}
+    content={Router}
   >
   </Layout>
 )
+
+(console.log "undefined:undefined:" undefined)
 
 
 
 ;;/Users/panfeng/coder/myProject/LUI/cmake-build-release/LUI.app/Contents/MacOS/LUI /Users/panfeng/Desktop/Document/index.lab
 ;;/Users/panfeng/Desktop/xx11xx/LUI.app/Contents/MacOS/LUI /Users/panfeng/Desktop/Document/index.lab
+;;/Users/panfeng/coder/myProject/LUI/cmake-build-debug/LUI.app/Contents/MacOS/LUI /Users/panfeng/Desktop/Document/index.lab

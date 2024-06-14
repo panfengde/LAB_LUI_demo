@@ -23,4 +23,8 @@
     (syntax-rules ()
                     ((_ ...) (== (type ...) "undefined"))))
 
+(define-syntax isFunction
+    (syntax-rules ()
+                    ((_ ...) (== (type ...) "function"))))
+
 (export {})

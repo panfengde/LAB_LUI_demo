@@ -16,8 +16,9 @@
 (let LayoutContent (style.create  {
     width:"100%",
     flexGrow :"1",
-    overflow:"scroll"
+    overflow:"hidden"
 }))
+
 
 
  (function (Layout props)

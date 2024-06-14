@@ -1,0 +1,46 @@
+(let activeStyle (style.create  {
+  color:"255|255|255|255",
+  backgroundColor:"49|119|255|255",
+  fontSize:"16px",
+  lineHeight:"16px",
+  height:"16px",
+  margin:"0px 10px 5px 0px"
+}))
+
+(let noActiveStyle (style.create  {
+  color:"170|170|170|255",
+  fontSize:"14px",
+  lineHeight:"14px",
+  height:"14px",
+  margin:"0px 10px 5px 0px"
+}))
+
+(function (Menu props propMethod)
+  (let data props.data)
+
+  (let state (propMethod.initState {
+    activeKey: undefined
+  }))
+
+  (function (changeAction obj)
+    (set state.activeKey obj.key)
+    (if (isFunction props.onChange) (props.onChange obj.children) undefined)
+    (propMethod.update )
+  )
+  <div>
+    {
+      (data.map (lambda (obj)
+        (let isActive (== state.activeKey obj.key))
+        <div key={obj.key}>
+          <div 
+            className={(if isActive activeStyle noActiveStyle)}
+            onClick={(lambda (x) (changeAction obj))}
+          >{obj.label}</div>
+        </div>
+        )
+      )
+    }
+  </div>
+)
+
+(export {Menu})

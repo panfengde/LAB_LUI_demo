@@ -2,7 +2,7 @@
 (import {UseComponent} from "./componentsDemo/UseComponent/index.lab")
 
 (let LUIPartStyle (style.create  {   
-    backgroundColor:"25|29|34|255"
+    backgroundColor:"35|39|47|255",
 }))
 
 (let LUIPartIntroduceStyle (style.create  {   

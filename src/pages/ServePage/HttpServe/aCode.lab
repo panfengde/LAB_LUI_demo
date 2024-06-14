@@ -1,0 +1,33 @@
+
+
+(let codeString "(let aHttpService (new HttpService))
+
+
+(aHttpService.Static \"/hello\" \"/Users/panfeng/coder/myProject/Lab/草稿/\")
+
+(let stringDemo \"-----123-----\")
+(aHttpService.GET \"/getTest\"
+        (lambda (request response)
+             (console.log \"get方法测试:\" stringDemo request response)
+
+        )
+)
+
+(aHttpService.GET \"/changeString\"
+        (lambda ()
+            (console.log \"changeString\")
+            (set stringDemo \"change string\")
+        )
+)
+
+(let aHttpServerT (new HttpServerT))
+(set aHttpServerT.port 3300)
+(set aHttpServerT.service aHttpService)
+
+(aHttpServerT.run )
+")
+
+
+(export {codeString})
+
+
