@@ -1,0 +1,72 @@
+
+(import {CodeComponent} from "../../../container/CodeComponent/index.lab")
+(import {
+  constantCodeString, 
+  varDemo,
+  setDemo,
+  coutDemo,
+  functionStr,
+  ifStr,
+  whileStr,
+  beginStr,
+  arrayStr,
+  dicStr
+} from "./2baseUseCodeStr.lab")
+
+ (let aStyle (style.create  {
+   fontSize:"16px",
+   lineHeight:"24px"
+}))
+
+(let aTitle (style.create  {
+   color:"255|155|55|255",
+   margin:"10px 0px 10px 0px"
+}))
+
+
+
+(function (Divider )
+  <div style={{margin:"20px 0px 20px 0px"}}></div>
+)
+
+
+(let content 
+  <div className={aStyle}>
+    <div className={aTitle}>S表达式</div>
+    <div >本语言采用S表达式。所谓S表达式就是如下形式“(操作符 参数1 参数2  ...)”。它的意思是，使用操作符，对参数1、参数2、...进行操作，同时将操作结果返回。本语言的所有语法都是S表达式</div>
+    <Divider></Divider>
+
+    <div className={aTitle}>基本元素</div>
+    <CodeComponent code={constantCodeString}></CodeComponent>
+
+    <div className={aTitle}>变量定义符let</div>
+    <CodeComponent code={varDemo}></CodeComponent>
+
+    <div className={aTitle}>赋值操作符set</div>
+    <CodeComponent code={setDemo}></CodeComponent>
+
+    <div className={aTitle}>简单计算</div>
+    <CodeComponent code={coutDemo}></CodeComponent>
+
+    <div className={aTitle}>函数定义符function</div>
+    <CodeComponent code={functionStr}></CodeComponent>
+
+    <div className={aTitle}>条件判断符号if</div>
+    <CodeComponent code={ifStr}></CodeComponent>
+
+    <div className={aTitle}>循环符号if</div>
+    <CodeComponent code={whileStr}></CodeComponent>
+
+    <div className={aTitle}>合并语句符begin</div>
+    <CodeComponent code={beginStr}></CodeComponent>
+
+    <div className={aTitle}>数组字面定义</div>
+    <CodeComponent code={arrayStr}></CodeComponent>
+
+    <div className={aTitle}>json字典字面定义</div>
+    <CodeComponent code={dicStr}></CodeComponent>
+  </div>
+)
+
+
+ (export {label:"语言基础教程",key:"1",children:content})

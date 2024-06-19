@@ -1,0 +1,61 @@
+ (let aStyle (style.create  {
+   fontSize:"16px",
+   lineHeight:"24px"
+}))
+
+(let aTitle (style.create  {
+   color:"255|155|55|255"
+}))
+
+(function (Divider )
+  <div style={{margin:"20px 0px 20px 0px"}}></div>
+)
+
+(let content 
+  <div className={aStyle}>
+    <div style={{fontSize:"24px",lineHeight:"32px",margin:"20px 0px 20px 0px"}} >杂 谈</div> 
+    <div >LAB是一个跨平台的全流程APP应用平台。它有两个核心目标</div> 
+    <div className={aTitle}>1.让那些热衷编程，热衷分享的程序员，在更友好的制作程序的同时获得相应回馈的平台。</div> 
+    <div className={aTitle}>2.让终端用户能形式多样的使用程序服务</div> 
+
+    <Divider></Divider>
+
+    <div>程序界常常谈论开源，借助开源。神圣的开源思想，也确确实实的促进了程序界的发展、繁荣、分享。但我认为开源思想，在朝着它的既定目标前行时，有些力不从心了</div> 
+    <div>相当多优秀的开源贡献者，为程序界作出了巨大的代码贡献，却生活都困难重重。开源思想很神圣，但是我认为它不是一个良性的可持续的生态。</div> 
+    <div>相当多的人只想借助开源，自己既不不贡献，也不在经济或代码等层面回馈开源贡献者。</div> 
+    <div>他们什么都不付出，单纯的就认为开源作者，必须持续，及时，高效的，处理他们的反馈，更有甚者说，做不到这些就别开源。把白嫖和霸凌做得如此的理所当然。</div> 
+    <div>最重要的行为，这些冷落了那些开源分享的心，扑灭了开源分享的热血</div> 
+    <div className={aTitle}>所谓，为众人抱薪者，不可使其冻毙于风雪；LAB平台是对这一愿景的探索。我的方式是：给予合理合适又必要的反馈！</div>
+
+    <Divider></Divider>
+    <div className={aTitle}> 为了实现这两个目的和一个愿景，首先从技术上我做出了如下努力。</div>
+    <div> 1. 开发全新的完全可控的语言。必须完全可控且不同，同时要竭力避免被第三方抄袭。因为同质平台越多，第三方越多，程序为兼容付出的努力也将越来越多。</div>
+    <div> 2. 开发全新的完全自主可控的GUI引擎。界面一定是相当多程序中重要的一环，它必须被囊括进来。</div>
+    <div> 3. 开发完整的完全自主可控的打包发布机制，避免各种形式的第三方打包发布策略。竭力避免价值不大的巨大流程工作量，并全力保护源代码。</div>
+    <div> 总之：在程序的制作流程上一定要可控或约束，强有力的保护平台内部的程序。</div>
+
+    <Divider></Divider>
+    <div className={aTitle}> 为了实现这些目的和愿景，我在策略进行两如下规划（在做）。</div>
+    <div> 1. 统一的包管理机制，付费或订阅制的包分享。</div>
+    <div> 2. 平台内app的使用，不会是免费的。app的收益，会有一个分配算法，回馈给上游全部的贡献者和平台本身</div>
+    <div> 3. 不建议，但支持打包为独立APP应用，但一定是收费的。这些费用也有一个分配算法，回馈给上游全部的贡献者和平台本身</div>
+    <div> 总之：让大家都有肉吃，然后去制造更好用的程序。</div>
+
+    <Divider></Divider>
+    <div className={aTitle}> 那我岂不是朝着垄断、暴利前行？回答这个问题为时尚早，但绝对不是。</div>
+
+    <Divider></Divider>
+    <div className={aTitle}> 我选择了采用S表达试的类Lisp语言，原因：</div>
+    <div>1. 它足够简单，不管是学习还是使用它。同时制造它的解释器与编译器也足够简单。</div>
+    <div>2. 除了括号不好看，S表达式它足够的强大，它估计能承载所有的语法功能，并能快速扩充。</div>
+    <div>3. S表达式的语言，是可以做到性能足够强大的。业界已经有相应典范。</div>
+
+    <Divider></Divider>
+    <div className={aTitle}>我选择了从opengl开始自己研制图形引擎，原因：</div>
+    <div>1. 我要适配自己的语言</div>
+    <div>2. 为了灵活高效的响应自己的呈现需求</div>
+    <div>3. 可控，可控还是可控</div>
+  </div>
+ )
+
+ (export {label:"LAB平台杂谈",key:"1",children:content})

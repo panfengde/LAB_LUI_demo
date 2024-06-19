@@ -9,8 +9,8 @@
 (let oneRow (style.create {
             color:"127|190|219|255",
             fontSize:"13px",
-            height:"14px",
-            lineHeight:"14px"
+            height:"15px",
+            lineHeight:"15px"
         }
 ))
 

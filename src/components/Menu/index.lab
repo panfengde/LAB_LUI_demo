@@ -22,11 +22,18 @@
     activeKey: undefined
   }))
 
+  (propMethod.afterMounted (lambda (x)
+    (changeAction data[0])
+  ))
+
   (function (changeAction obj)
     (set state.activeKey obj.key)
     (if (isFunction props.onChange) (props.onChange obj.children) undefined)
     (propMethod.update )
   )
+
+  
+
   <div>
     {
       (data.map (lambda (obj)

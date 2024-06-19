@@ -2,16 +2,16 @@
   color:"255|255|255|255",
   backgroundColor:"49|119|255|255",
   fontSize:"16px",
-  lineHeight:"16px",
-  height:"16px",
+   lineHeight:"18px",
+  height:"18px",
   margin:"0px 10px 5px 0px"
 }))
 
 (let noActiveStyle (style.create  {
   color:"170|170|170|255",
   fontSize:"14px",
-  lineHeight:"14px",
-  height:"14px",
+  lineHeight:"18px",
+  height:"18px",
   margin:"0px 10px 5px 0px"
 }))
 
@@ -35,7 +35,7 @@
             className={(if isActive activeStyle noActiveStyle)}
             onClick={(lambda (x) (changeAction obj))}
           >{obj.label}</div>
-          {(if isActive  <div style={{margin:"0px 0px 20px 20px"}}>{obj.children}</div> undefined)}
+          {(if isActive  <div style={{margin:"0px 0px 0px 20px"}}>{obj.children}</div> undefined)}
         </div>
         )
       )

@@ -1,5 +1,7 @@
 (import {Collapse} from "../../components/Collapse/index.lab")
 (import {Menu} from "../../components/Menu/index.lab")
+(import 1home from "./pages/1home.lab")
+(import 2baseUse from "./pages/2baseUse.lab")
 
 (let TutorialStyle (style.create  {
       width:"100%",
@@ -17,6 +19,7 @@
     height:"100%",
     padding:"20px",
     border:"1px",
+    overflow:"scroll"
   }))
 (let TutorialContentMenuBox (style.create  {
     width:"300px",
@@ -25,17 +28,18 @@
   }))
   
 
+(let Preface [1home])
 
 (let UIMenu [
-      {label:"Collapse折叠面板",key:"1",children:<div>对复杂区域进行分组和隐藏，保持页面的整洁。手风琴 是一种特殊的折叠面板，只允许单个内容区域展开。</div>},
+      2baseUse
       {label:"Alert警告提示",key:"2",children:<div>警告提示，展现需要关注的信息。</div>},
-      {label:"Drawer抽屉",key:"3",children:<div>屏幕边缘滑出的浮层面板。</div>},
+   
     ])
+
+    
 
 (let ServeMenu [
   {label:"Collapse折叠面板",key:"1",children:<div>对复杂区域进行分组和隐藏，保持页面的整洁。手风琴 是一种特殊的折叠面板，只允许单个内容区域展开。</div>},
-  {label:"Alert警告提示",key:"2",children:<div>警告提示，展现需要关注的信息。</div>},
-  {label:"Drawer抽屉",key:"3",children:<div>屏幕边缘滑出的浮层面板。</div>},
 ])
 
 
@@ -60,8 +64,9 @@
 
   (let memus (propMethod.initState {
       TopMemu:[
-        {label:"UI",key:"1",children: <Menu onChange={action.changeContent} data={UIMenu}></Menu>},
-        {label:"serve",key:"2",children:<Menu onChange={action.changeContent} data={ServeMenu}></Menu>},
+        {label:"序言",key:"1",children: <Menu onChange={action.changeContent} data={Preface}></Menu>},
+        {label:"语言教程",key:"2",children: <Menu onChange={action.changeContent} data={UIMenu}></Menu>},
+        {label:"API文档",key:"3",children:<Menu onChange={action.changeContent} data={ServeMenu}></Menu>},
       ],
       setState:(lambda (key x)
         (set state[key] x)

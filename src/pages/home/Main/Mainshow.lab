@@ -33,7 +33,7 @@
 (function (MainShow props)
     <div className={MainShowStyle}>
         <img src="./src/asset/logo.png" style={{width:"60px",height:"60px"}}></img>
-        <div style={{fontSize:"30px",height:"40px",margin:"0px 0px 10px 0px"}} >LUI/LAB</div>
+        <div style={{fontSize:"30px",height:"40px",margin:"0px 0px 10px 0px"}} >Love As Before</div>
         <div style={{fontSize:"18px",height:"29px"}} >从零编写的采用S表达式的新编程语言</div>
         <div style={{fontSize:"18px",height:"29px"}} >从零编写的图形与布局引擎</div>
         <div style={{fontSize:"18px",height:"29px"}} >从零编写的通用程序平台</div>

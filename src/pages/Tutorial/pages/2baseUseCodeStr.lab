@@ -1,0 +1,75 @@
+//常量
+(let constantCodeString "12334 // 数字常量
+\"hello word\" // 字符串常量
+true // 布尔值常量
+")
+
+
+(let varDemo "(let aNumber 12345)
+(let aString \"hello word\")
+(let aBool true)
+")
+
+(let setDemo "(let aNumber 12345)
+(set aNumber 54321)
+")
+
+(let coutDemo "(+ 1 2)
+(- 10 5)
+(* 2 3)
+(/ 10 2)
+")
+
+
+(let functionStr "(function (add a)
+  (+ a 200)
+  (console.log \"执行完毕\")
+)
+#执行add方法
+(add 100)
+")
+
+
+(let ifStr "//定义一个名为add的函数
+(if (> 10 20)
+  (console.log \"true分之\")
+  (console.log \"false分之\")
+)")
+
+(let whileStr "(let x 1)
+(while (< x 10)
+    (console.log x)
+    (set x (+ x 1))
+)
+")
+
+(let beginStr "(begin 
+  (+ 1 1)
+  (- 1 1)
+  (* 2 2)
+  (/ 2 2)
+)
+")
+
+(let arrayStr "[1 2 3 4 5]
+[10,20,30,40,50]")
+
+(let dicStr "{
+  name: \"张三\",
+  age: 18,
+  sex: \"男\"
+}")
+
+
+(export  {
+  constantCodeString, 
+  varDemo,
+  setDemo,
+  coutDemo,
+  functionStr,
+  ifStr,
+  whileStr,
+  beginStr,
+  arrayStr,
+  dicStr
+})
