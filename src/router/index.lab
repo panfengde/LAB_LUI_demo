@@ -1,6 +1,6 @@
 (import {storeState} from "../store/index.lab")
 (import {Home} from "../pages/home/index.lab")
-(import {ServePage} from "../pages/ServePage/index.lab")
+(import {DemoPage} from "../pages/demoPage/index.lab")
 (import {Tutorial} from "../pages/Tutorial/index.lab")
 
 (function (Go )
@@ -47,7 +47,7 @@
 (function (Router )
   (cond
      ((== storeState.type "home")  <Home></Home>)
-     ((== storeState.type "serve")  <ServePage></ServePage>)
+     ((== storeState.type "serve")  <DemoPage></DemoPage>)
      ((== storeState.type "test")  <div>404</div>)
      ((== storeState.type "tutorial")  <Tutorial></Tutorial>)
      (else <div>404</div>)

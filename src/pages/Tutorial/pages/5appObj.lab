@@ -1,0 +1,42 @@
+
+(import {CodeComponent} from "../../../container/CodeComponent/index.lab")
+(import {
+  sleepStr, 
+} from "./3baseMethodCodeStr.lab")
+
+ (let aStyle (style.create  {
+   fontSize:"16px",
+   lineHeight:"24px",
+}))
+
+(let aTitle (style.create  {
+   color:"255|155|55|255",
+   margin:"10px 0px 10px 0px"
+}))
+
+
+
+(function (Divider )
+  <div style={{margin:"20px 0px 20px 0px"}}></div>
+)
+
+
+(let content 
+  <div className={aStyle}>
+    <div className={aTitle}>APP对象</div>
+
+    <div >app对象，学习react生态机制。编写了一个根据数据，绘制节目交互的方法render。使用app.render绘制界面</div>
+    <div className={aTitle}>div</div>
+    <div className={aTitle}>span</div>
+    <div className={aTitle}>select</div>
+    <div className={aTitle}>input</div>
+    <div className={aTitle}>函数组建</div>
+    <div className={aTitle}>jsx结构</div>
+    <div className={aTitle}>等</div>
+
+    <div className={aTitle}>flex布局</div>
+    <div className={aTitle}>组件生命周期</div>
+  </div>
+)
+
+ (export {label:"UI方法",key:"5",children:content})

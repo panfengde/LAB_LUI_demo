@@ -1,0 +1,11 @@
+(let sleepStr "(sleep (lambda () 
+          (console.log \"hello sleep\")
+    )
+1000
+)")
+
+
+
+(export  {
+  sleepStr, 
+})

@@ -77,7 +77,6 @@
   )
   (if (more oneCodeRow.length 0)
       (codeRows.push oneCodeRow)
-      (console.log "else")
   )
 
   (let showRows [])
@@ -96,3 +95,4 @@
 (export {
   CodeComponent
 })
+

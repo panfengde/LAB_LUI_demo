@@ -1,0 +1,15 @@
+
+
+(let codeString "(let aHttpRequest (new HttpRequest))
+(set aHttpRequest.method \"get\")
+(set aHttpRequest.url \"https://example.com\")
+(aHttpRequest.sendAsync (lambda (res) 
+        (console.log res.body )
+   )
+)
+")
+
+
+(export {codeString})
+
+

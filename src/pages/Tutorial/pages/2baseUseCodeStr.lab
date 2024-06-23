@@ -30,6 +30,10 @@ true // 布尔值常量
 ")
 
 
+(let lambdaStr "(lambda (x) 
+  (console.log x)
+)")
+
 (let ifStr "//定义一个名为add的函数
 (if (> 10 20)
   (console.log \"true分之\")
@@ -61,15 +65,66 @@ true // 布尔值常量
 }")
 
 
+(let condStr "(let x 2)
+(cond 
+  ((== x 1) (console.log \"x = 1\" )
+  ((== x 2) (console.log \"x = 2\" )
+  ((== x 3) (console.log \"x = 3\" )
+  (else (console.log \"x = 0\") )
+)")
+
+(let typeStr "(type 12345)
+(type \"hello word\")
+(type true)
+(type [1 2 3])
+(type {name:123})
+")
+
+(let classStr "(class Animal
+    (function  (constructor name age)
+        (set this.name name)
+        (set this.age age)
+    )
+    (function (speak )
+        (console.log this.name this.age)
+    )
+)"
+)
+
+(let newStr "(let aAnimal (new animal \"老三\" 4))")
+
+
+(let exportStr "(let aAnimal (new animal \"老三\" 4))
+(export {aAnimal:aAnimal})
+")
+
+(let importStr "(import {aAnimal} from \"./index.lab\")
+(aAnimal.speak )
+")
+
+(let defineSyntaxStr "(define-syntax +=
+  (syntax-rules ( )
+     ((_ a b) (begin (set a (+ a b)) a))
+     ((_ a b ...) (begin (set a (+ a b ...)) a))))
+")
+
 (export  {
   constantCodeString, 
   varDemo,
   setDemo,
   coutDemo,
   functionStr,
+  lambdaStr,
   ifStr,
   whileStr,
   beginStr,
   arrayStr,
-  dicStr
+  dicStr,
+  condStr,
+  typeStr,
+  classStr,
+  newStr,
+  exportStr,
+  importStr,
+  defineSyntaxStr,
 })

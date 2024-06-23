@@ -1,0 +1,35 @@
+
+(import {CodeComponent} from "../../../container/CodeComponent/index.lab")
+(import {
+  sleepStr, 
+} from "./3baseMethodCodeStr.lab")
+
+ (let aStyle (style.create  {
+   fontSize:"16px",
+   lineHeight:"24px"
+}))
+
+(let aTitle (style.create  {
+   color:"255|155|55|255",
+   margin:"10px 0px 10px 0px"
+}))
+
+
+
+(function (Divider )
+  <div style={{margin:"20px 0px 20px 0px"}}></div>
+)
+
+
+(let content 
+  <div className={aStyle}>
+    <div className={aTitle}>语言中的基本量都是基于对象设计，都有自己的原型方法</div>
+
+    <div className={aTitle}>数字类型原型方法</div>
+    <div className={aTitle}>字符串原型方法</div>
+    <div className={aTitle}>数组原型方法</div>
+    <div className={aTitle}>对象原型方法</div>
+  </div>
+)
+
+ (export {label:"原型方法",key:"4",children:content})

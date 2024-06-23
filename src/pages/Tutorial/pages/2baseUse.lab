@@ -6,11 +6,19 @@
   setDemo,
   coutDemo,
   functionStr,
+  lambdaStr,
   ifStr,
   whileStr,
   beginStr,
   arrayStr,
-  dicStr
+  dicStr,
+  condStr,
+  typeStr,
+  classStr,
+  newStr,
+  exportStr,
+  importStr,
+  defineSyntaxStr,
 } from "./2baseUseCodeStr.lab")
 
  (let aStyle (style.create  {
@@ -51,8 +59,14 @@
     <div className={aTitle}>函数定义符function</div>
     <CodeComponent code={functionStr}></CodeComponent>
 
+    <div className={aTitle}>匿名函数定义符lambda</div>
+    <CodeComponent code={lambdaStr}></CodeComponent>
+
     <div className={aTitle}>条件判断符号if</div>
     <CodeComponent code={ifStr}></CodeComponent>
+
+    <div className={aTitle}>多条件判断符号cond</div>
+    <CodeComponent code={condStr}></CodeComponent>
 
     <div className={aTitle}>循环符号if</div>
     <CodeComponent code={whileStr}></CodeComponent>
@@ -60,11 +74,30 @@
     <div className={aTitle}>合并语句符begin</div>
     <CodeComponent code={beginStr}></CodeComponent>
 
+    <div className={aTitle}>类型判断符Type</div>
+    <CodeComponent code={typeStr}></CodeComponent>
+
     <div className={aTitle}>数组字面定义</div>
     <CodeComponent code={arrayStr}></CodeComponent>
 
     <div className={aTitle}>json字典字面定义</div>
     <CodeComponent code={dicStr}></CodeComponent>
+
+    <div className={aTitle}>类定义符class</div>
+    <div>class的类定义，在继承方面是采用原型链条的形式</div>
+    <CodeComponent code={classStr}></CodeComponent>
+
+    <div className={aTitle}>实例对象符new</div>
+    <CodeComponent code={newStr}></CodeComponent>
+
+    <div className={aTitle}>模块暴露符export</div>
+    <CodeComponent code={exportStr}></CodeComponent>
+
+    <div className={aTitle}>模块引用符import</div>
+    <CodeComponent code={importStr}></CodeComponent>
+
+    <div className={aTitle}>宏定义符define-syntax</div>
+    <CodeComponent code={defineSyntaxStr}></CodeComponent>
   </div>
 )
 

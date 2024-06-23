@@ -45,10 +45,8 @@
      <div className={menuBoxStyle}>
         <input className={inputMenuStyle}></input>
         <div onClick={(lambda () (changeType "home"))}>主页</div>
-        <div onClick={(lambda () (changeType "serve"))}>界面示例</div>
-        //<div onClick={(lambda () (changeType "test"))}>服务示例</div>
+        <div onClick={(lambda () (changeType "serve"))}>示例</div>
         <div onClick={(lambda () (changeType "tutorial"))}>教程</div>
-        <div onClick={(lambda () (changeType "third"))}>API文档</div>
         <div>等等</div>
      </div>
   </div>

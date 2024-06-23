@@ -2,7 +2,7 @@
   color:"255|255|255|255",
   backgroundColor:"49|119|255|255",
   fontSize:"16px",
-   lineHeight:"18px",
+  lineHeight:"18px",
   height:"18px",
   margin:"0px 10px 5px 0px"
 }))
@@ -23,9 +23,9 @@
 
   (function (changeAction obj)
     (set state.activeKey obj.key)
-    //(if (isFunction props.changeAction) (props.changeAction obj.children) undefined)
     (propMethod.update )
   )
+
   <div>
     {
       (data.map (lambda (obj)

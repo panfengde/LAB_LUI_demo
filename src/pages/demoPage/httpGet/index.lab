@@ -1,0 +1,42 @@
+
+(import {CodeComponent} from "../../../container/CodeComponent/index.lab")
+(import {codeString} from "./aCode.lab")
+
+
+(function (HttpGet props propsMethods)
+  (let state (propsMethods.initState 
+      {
+        someTxt:"原始文字",
+        test:"原始文字",
+        setState:(lambda (key value) 
+                        (set (get state key) value)
+                        (propsMethods.update)
+                 )
+      }
+    )
+  )
+  (propsMethods.afterMounted (lambda (x)
+
+      (let aHttpRequest (new HttpRequest))
+      (set aHttpRequest.method "get")
+      (set aHttpRequest.url "https://example.com")
+      (aHttpRequest.sendAsync (lambda (res) 
+        (state.setState "someTxt" res.body )
+        )
+      )
+    )
+  )
+
+  <div>{state.someTxt}</div>
+)
+
+(function (HttpGetDemo )
+  <div  style={{width:"500px"}}>
+    <CodeComponent code={codeString}></CodeComponent>
+    <HttpGet ></HttpGet>
+  </div >
+  
+)
+
+
+(export {HttpGetDemo})

@@ -1,0 +1,39 @@
+
+(import {HttpGetDemo} from "./httpGet/index.lab")
+(import {HttpServe} from "./HttpServe/index.lab")
+(import {FormDemo} from "./Form/index.lab")
+(import {CanvasDemo} from "./Canvas/index.lab")
+(import {Table} from "./table/index.lab")
+
+(let demoPageStyle (style.create  {
+    width:"100%",
+    height:"100%",
+    display:"flex",
+    flexDirection:"column",
+    alignItems:"alignCenter",
+    overflow:"scroll",
+}))
+
+(function (DemoPage )
+  <div className={demoPageStyle}>
+    <div style={{fontSize:"24px",margin:"10px 0px 20px 0px"}} >http请求</div>
+    <HttpGetDemo></HttpGetDemo>
+
+    <HttpServe></HttpServe>
+
+    <div style={{fontSize:"24px",margin:"10px 0px 20px 0px"}} >Form示例</div>
+    <FormDemo></FormDemo>
+
+    <div style={{fontSize:"24px",margin:"20px 0px 20px 0px"}} >canvas绘图示例</div>
+    <CanvasDemo></CanvasDemo>
+
+    <div style={{fontSize:"24px",margin:"20px 0px 20px 0px"}} >基本元素形成Table</div>
+    <div style={{width:"700px"}}>
+         <Table></Table>
+    </div>
+ 
+  </div>
+
+)
+
+(export {DemoPage})

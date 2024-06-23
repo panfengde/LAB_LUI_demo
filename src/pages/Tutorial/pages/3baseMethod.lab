@@ -1,0 +1,42 @@
+
+(import {CodeComponent} from "../../../container/CodeComponent/index.lab")
+(import {
+  sleepStr, 
+} from "./3baseMethodCodeStr.lab")
+
+ (let aStyle (style.create  {
+   fontSize:"16px",
+   lineHeight:"24px"
+}))
+
+(let aTitle (style.create  {
+   color:"255|155|55|255",
+   margin:"10px 0px 10px 0px"
+}))
+
+
+
+(function (Divider )
+  <div style={{margin:"20px 0px 20px 0px"}}></div>
+)
+
+
+(let content 
+  <div className={aStyle}>
+    <div className={aTitle}>sleep</div>
+    <CodeComponent code={sleepStr}></CodeComponent>
+    
+    <div className={aTitle}>loopSleep</div>
+    <div className={aTitle}>常用计算方法</div>
+    <div className={aTitle}>逻辑运算方法</div>
+    <div className={aTitle}>JSON对象</div>
+    <div className={aTitle}>FFI方法</div>
+    <div className={aTitle}>folderObj对象</div>
+    <div className={aTitle}>HttpRequest对象</div>
+    <div className={aTitle}>HttpHttpService对象</div>
+    <div className={aTitle}>fileObj对象</div>
+    <div className={aTitle}>zipObj对象</div>
+  </div>
+)
+
+ (export {label:"基础方法",key:"2",children:content})
