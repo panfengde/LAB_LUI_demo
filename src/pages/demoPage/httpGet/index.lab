@@ -15,13 +15,14 @@
       }
     )
   )
+  
   (propsMethods.afterMounted (lambda (x)
-
       (let aHttpRequest (new HttpRequest))
       (set aHttpRequest.method "get")
       (set aHttpRequest.url "https://example.com")
       (aHttpRequest.sendAsync (lambda (res) 
         (state.setState "someTxt" res.body )
+        //(state.setState "someTxt" "---------" )
         )
       )
     )
@@ -29,6 +30,8 @@
 
   <div>{state.someTxt}</div>
 )
+
+
 
 (function (HttpGetDemo )
   <div  style={{width:"500px"}}>

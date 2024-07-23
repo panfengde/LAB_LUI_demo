@@ -26,6 +26,10 @@
     (propMethod.update )
   )
 
+   (propMethod.afterMounted (lambda (x)
+    (changeAction data[0])
+  ))
+
   <div>
     {
       (data.map (lambda (obj)

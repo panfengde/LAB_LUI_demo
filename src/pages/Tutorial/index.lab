@@ -1,5 +1,6 @@
 (import {Collapse} from "../../components/Collapse/index.lab")
 (import {Menu} from "../../components/Menu/index.lab")
+(import start from "./pages/2start.lab")
 (import 1home from "./pages/1home.lab")
 (import 2baseUse from "./pages/2baseUse.lab")
 (import 3baseMethod from "./pages/3baseMethod.lab")
@@ -33,7 +34,7 @@
 
 (let Preface [1home])
 
-(let UIMenu [2baseUse 3baseMethod 4objProto 5appObj])
+(let UIMenu [start 2baseUse 3baseMethod 4objProto 5appObj])
 
 (function (Tutorial props propMethod)
   (let state (propMethod.initState {

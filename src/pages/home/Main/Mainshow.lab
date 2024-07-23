@@ -38,8 +38,12 @@
         <div style={{fontSize:"18px",height:"29px"}} >从零编写的图形与布局引擎</div>
         <div style={{fontSize:"18px",height:"29px"}} >从零编写的通用程序平台</div>
         <div>
-            <Mybutton>学习文档</Mybutton>
-            <Mybutton>接口文档</Mybutton>
+            <Mybutton>windwos </Mybutton>
+            <Mybutton>macOS Inter </Mybutton>
+            <Mybutton>macOS M </Mybutton>
+            <Mybutton>Linux </Mybutton>
+            <Mybutton>android </Mybutton>
+            <Mybutton>apple ios </Mybutton>
         </div>
     </div>
 )

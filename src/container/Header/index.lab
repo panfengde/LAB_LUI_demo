@@ -37,19 +37,22 @@
 }))
 
 (function (Header props)
-  <div className={HeaderStyle} >
-     <div className={LogoStyle}>
-        <img src="./src/asset/logo.png" style={{margin:"0px 10px 0px 10px",width:"30px",height:"30px"}}></img>
-        <span style={{fontSize:"20px"}}>Love As Before</span>
-     </div>
-     <div className={menuBoxStyle}>
-        <input className={inputMenuStyle}></input>
-        <div onClick={(lambda () (changeType "home"))}>主页</div>
-        <div onClick={(lambda () (changeType "serve"))}>示例</div>
-        <div onClick={(lambda () (changeType "tutorial"))}>教程</div>
-        <div>等等</div>
-     </div>
-  </div>
+  
+    <div className={HeaderStyle} >
+        <div className={LogoStyle}>
+            <img src="./src/asset/logo.png" style={{margin:"0px 10px 0px 10px",width:"30px",height:"30px"}}></img>
+            <span style={{fontSize:"20px"}}>Love As Before</span>
+        </div>
+        <div className={menuBoxStyle}>
+            <input className={inputMenuStyle}></input>
+            <div onClick={(lambda () (changeType "home"))}>主页</div>
+            <div onClick={(lambda () (changeType "serve"))}>示例</div>
+            <div onClick={(lambda () (changeType "tutorial"))}>教程</div>
+            <div onClick={(lambda () (changeType "issues"))}>问题</div>
+            
+        </div>
+    </div>
+  
 )
 
 (console.log "Header----------------------")

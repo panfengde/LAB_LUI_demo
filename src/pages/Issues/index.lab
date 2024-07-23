@@ -1,0 +1,16 @@
+
+(let IssuesPageStyle (style.create  {
+    width:"100%",
+    height:"100%"
+}))
+
+(function (IssuesPage )
+  <div className={IssuesPageStyle}>
+    <div style={{fontSize:"24px",margin:"10px 0px 20px 0px"}} >自动垃圾回收</div>
+    <div >尝试过很多种垃圾回收的办法，有的性能有问题，有的太过复杂，总之没找到一个好的办法进行垃圾回收。主要都是因为闭包产生的，暂时不处理了，有难度</div>
+    
+  </div>
+
+)
+
+(export {IssuesPage})

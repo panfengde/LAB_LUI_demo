@@ -2,10 +2,12 @@
 (import {Home} from "../pages/home/index.lab")
 (import {DemoPage} from "../pages/demoPage/index.lab")
 (import {Tutorial} from "../pages/Tutorial/index.lab")
+(import {IssuesPage} from "../pages/Issues/index.lab")
 
 (function (Go )
   <div>GoGo</div>
 )
+
 (function (HttpTest props propsMethods)
   (let state (propsMethods.initState 
       {
@@ -20,15 +22,7 @@
   )
 
   (propsMethods.afterMounted (lambda (x)
-
-      // (let aHttpRequest (new HttpRequest))
-      // (set aHttpRequest.method "get")
-      // (set aHttpRequest.url "https://example.com")
-      // (aHttpRequest.sendAsync (lambda (res) 
-      //   (state.setState "someTxt" res.body )
-      //   )
-      // )
-
+      
       (sleep (lambda ()
           (state.setState "someTxt" "https://example.com" )
           )
@@ -50,6 +44,7 @@
      ((== storeState.type "serve")  <DemoPage></DemoPage>)
      ((== storeState.type "test")  <div>404</div>)
      ((== storeState.type "tutorial")  <Tutorial></Tutorial>)
+     ((== storeState.type "issues")  <IssuesPage></IssuesPage>)
      (else <div>404</div>)
   )
 )

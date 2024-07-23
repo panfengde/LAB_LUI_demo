@@ -27,7 +27,8 @@
                                     (canvasDOm.arc [i (+ a_k 5)] length)
                                 )
                             )
-                            
+                            (canvasDOm.drawBezier [100,100] [400,700] [700,100])
+                            (canvasDOm.drawPath [100,500] [200,700]  [300,100] [400,400] [500,200] [600,600] [700,200] [800,700])
                             (propsMethods.update  )
                         )
                     }

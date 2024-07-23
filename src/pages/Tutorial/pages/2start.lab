@@ -1,0 +1,75 @@
+
+(import {CodeComponent} from "../../../container/CodeComponent/index.lab")
+(import {FoldCard} from "../../../components/FoldCard/index.lab")
+(import {startCodeStr} from "./2startCodeStr.lab")
+
+ (let aStyle (style.create  {
+   fontSize:"16px",
+   lineHeight:"24px"
+}))
+
+(let aTitle (style.create  {
+   color:"255|155|55|255",
+   margin:"10px 0px 10px 0px"
+}))
+
+
+
+(function (Divider )
+  <div style={{margin:"20px 0px 20px 0px"}}></div>
+)
+
+
+(function  (GetInfos props propMethod)
+  (let state (propMethod.initState {
+    name: "",
+    sex: "",
+    age: "",
+    address: "",
+  }))
+
+  (function (change value key)
+    (set state[key] value)
+  )
+
+  (function (submit)
+    (console.log state)
+  )
+
+  <div>
+    <div>姓名</div>
+    <input style={{width:"300px"}} onChange={(lambda (value) (change value "name"))} value={state.name}> </input>
+    <div>性别</div>
+    <select style={{width:"300px"}} onChange={(lambda (value) (change value "sex"))} value={state.sex}>
+        <option value="男" label="男" >男</option>
+        <option value="女" label="女" >女</option>
+    </select >
+    <div>年龄</div>
+    <input style={{width:"300px"}} onChange={(lambda (value) (change value "age"))} value={state.age}> </input>
+    <div>地址</div>
+    <input style={{width:"300px"}} onChange={(lambda (value) (change value "address"))} value={state.address}></input>
+    <button onClick={submit}>确认</ button>
+  </div>
+)
+
+
+(let content 
+  <div className={aStyle}>
+    <div className={aTitle}>开始</div>
+    <div >新建一个文件，如index.lab。我们会在这个文件中编写代码。</div>
+    <div > 你可以使用你喜欢的任意编辑器编写，但是目前推荐使用vscode，目前会有一些vscode插件辅助你编程</div>
+    <FoldCard title="点击查看vscode说明">
+      <button >点击下载VSCode </button>
+      <div > 注：这里只是为了方便你下载vscode，如有疑问可以去官网下载</div>
+      <button >语言插件下载 </button>
+    </FoldCard>
+    <div >我们编写一个数据收集功能。将收集到的数据，传递给服务端。</div>
+    <div >前端部分</div>
+    <GetInfos ></GetInfos>
+    
+    <div >服务端部分</div>
+  </div>
+)
+
+
+ (export {label:"快速入门",key:"start",children:content})

@@ -19,8 +19,9 @@
   (let data props.data)
 
   (let state (propMethod.initState {
-    activeKey: undefined
-  }))
+      activeKey: undefined
+    })
+  )
 
   (propMethod.afterMounted (lambda (x)
     (changeAction data[0])

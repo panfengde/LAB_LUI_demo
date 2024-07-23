@@ -1,0 +1,24 @@
+
+
+(function (FoldCard props propMethod)
+  (let state (propMethod.initState {
+    show: false
+  }))
+
+  (function (changeAction)
+    (if state.show
+      (set state.show false)
+      (set state.show true)
+    )
+    (propMethod.update )
+  )
+
+  <div>
+    <div onClick={changeAction}>{props.title}</div>
+    {(if  state.show
+          <div>{props.children}</div>
+    )}
+  </div>
+)
+
+(export {FoldCard})
