@@ -12,24 +12,21 @@
       height:"100%",
       display:"flex",
   }))
+  
 (let TutorialMenuBox (style.create  {
-      width:"300px",
+      width:"200px",
       height:"100%",
-      padding:"20px",
+      padding:"10px",
   }))
 
 (let TutorialContentStyle (style.create  {
     flexGrow:"1",
     height:"100%",
-    padding:"20px",
+    padding:"10px",
     border:"1px",
     overflow:"scroll"
   }))
-(let TutorialContentMenuBox (style.create  {
-    width:"300px",
-    height:"100%",
-    padding:"20px",
-  }))
+
   
 
 (let Preface [1home])

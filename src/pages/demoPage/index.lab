@@ -3,6 +3,7 @@
 (import {HttpServe} from "./HttpServe/index.lab")
 (import {FormDemo} from "./Form/index.lab")
 (import {CanvasDemo} from "./Canvas/index.lab")
+(import {ModelDemo} from "./Model/index.lab")
 (import {Table} from "./table/index.lab")
 
 (let demoPageStyle (style.create  {
@@ -16,9 +17,11 @@
 
 (function (DemoPage )
   <div className={demoPageStyle}>
+     <div style={{fontSize:"24px",margin:"20px 0px 20px 0px"}} >3D模型加载</div>
+    <ModelDemo></ModelDemo>
+
     <div style={{fontSize:"24px",margin:"10px 0px 20px 0px"}} >http请求</div>
     <HttpGetDemo></HttpGetDemo>
-
     <HttpServe></HttpServe>
 
     <div style={{fontSize:"24px",margin:"10px 0px 20px 0px"}} >Form示例</div>

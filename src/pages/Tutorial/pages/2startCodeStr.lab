@@ -1,8 +1,94 @@
-(let startCodeStr "")
+(let GetInfosStr "(function  (GetInfos props propMethod)
+  (let state (propMethod.initState {
+    name: \"\", sex: \"\", age: \"\", address: \"\",
+  }))
+
+  (function (change value key)
+    (set state[key] value)
+  )
+
+  (function (submit)
+    (console.log state)
+  )
+
+  <div>
+    <div>姓名</div>
+    <input onChange={(lambda (value) (change value \"name\"))} value={state.name}> </input>
+    <div>性别</div>
+    <select onChange={(lambda (value) (change value \"sex\"))} value={state.sex}>
+        <option value=\"男\" label=\"男\" >男</option>
+        <option value=\"女\" label=\"女\" >女</option>
+    </select >
+    <div>年龄</div>
+    <input onChange={(lambda (value) (change value \"age\"))} value={state.age}> </input>
+    <div>地址</div>
+    <input onChange={(lambda (value) (change value \"address\"))} value={state.address}></input>
+    <button onClick={submit}>确认</ button>
+  </div>
+)
+(app.render <GetInfos ></GetInfos>)
+")
+
+(function  (GetInfos props propMethod)
+  (let state (propMethod.initState {
+    name: "",
+    sex: "",
+    age: "",
+    address: "",
+  }))
+
+  (function (change value key)
+    (set state[key] value)
+  )
+
+  (function (submit)
+    (console.log state)
+  )
+
+  <div style={{backgroundColor: "255|255|255|255",color:"0|0|0|255",padding:"10px"}}>
+    <div>姓名</div>
+    <input style={{width:"300px"}} onChange={(lambda (value) (change value "name"))} value={state.name}> </input>
+    <div>性别</div>
+    <select style={{width:"300px"}} onChange={(lambda (value) (change value "sex"))} value={state.sex}>
+        <option value="男" label="男" >男</option>
+        <option value="女" label="女" >女</option>
+    </select >
+    <div>年龄</div>
+    <input style={{width:"300px"}} onChange={(lambda (value) (change value "age"))} value={state.age}> </input>
+    <div>地址</div>
+    <input style={{width:"300px"}} onChange={(lambda (value) (change value "address"))} value={state.address}></input>
+    <button onClick={submit}>确认</ button>
+  </div>
+)
 
 
 
+
+(let httpServeStr "//实例化一个HttpService对象
+(let aHttpService (new HttpService))
+
+//监听使用get的getTest请求
+(aHttpService.GET \"/getTest\"
+        (lambda (request response)
+             (console.log \"get方法测试:\" request response)
+        )
+)
+
+//实例化一个HttpServerT对象
+(let aHttpServerT (new HttpServerT))
+
+//aHttpServerT监听3300端口
+(set aHttpServerT.port 3300)
+
+//指定aHttpServerT要用的serve为aHttpService
+(set aHttpServerT.service aHttpService)
+
+//运行run
+(aHttpServerT.run )
+")
 
 (export  {
-  startCodeStr,
+  GetInfosStr,
+  GetInfos,
+  httpServeStr
 })

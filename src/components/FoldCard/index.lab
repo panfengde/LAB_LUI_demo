@@ -1,6 +1,18 @@
 
+(let aTitle (style.create  {
+   color:"155|155|55|255",
+   display:"inlineBlock"
+}))
+
+
+(let FoldCardBox (style.create  {
+   margin:"10px",
+   padding:"10px",
+   border:"1px",
+}))
 
 (function (FoldCard props propMethod)
+
   (let state (propMethod.initState {
     show: false
   }))
@@ -13,8 +25,8 @@
     (propMethod.update )
   )
 
-  <div>
-    <div onClick={changeAction}>{props.title}</div>
+  <div className={FoldCardBox}>
+    <div className={aTitle} onClick={changeAction}>{props.title}</div>
     {(if  state.show
           <div>{props.children}</div>
     )}
