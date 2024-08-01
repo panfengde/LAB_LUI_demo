@@ -17,16 +17,10 @@
 
 (function (DemoPage )
   <div className={demoPageStyle}>
-     <div style={{fontSize:"24px",margin:"20px 0px 20px 0px"}} >3D模型加载</div>
+    <div style={{fontSize:"24px",margin:"20px 0px 20px 0px"}} >3D模型加载</div>
     <ModelDemo></ModelDemo>
 
-    <div style={{fontSize:"24px",margin:"10px 0px 20px 0px"}} >http请求</div>
-    <HttpGetDemo></HttpGetDemo>
-    <HttpServe></HttpServe>
-
-    <div style={{fontSize:"24px",margin:"10px 0px 20px 0px"}} >Form示例</div>
-    <FormDemo></FormDemo>
-
+   
     <div style={{fontSize:"24px",margin:"20px 0px 20px 0px"}} >canvas绘图示例</div>
     <CanvasDemo></CanvasDemo>
 
@@ -34,6 +28,16 @@
     <div style={{width:"700px"}}>
          <Table></Table>
     </div>
+
+    <div style={{fontSize:"24px",margin:"10px 0px 20px 0px"}} >Form示例</div>
+    <FormDemo></FormDemo>
+     <div style={{fontSize:"24px",margin:"10px 0px 20px 0px"}} >http请求</div>
+    <HttpGetDemo></HttpGetDemo>
+    <HttpServe></HttpServe>
+
+    
+   
+
  
   </div>
 
