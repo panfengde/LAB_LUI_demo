@@ -52,10 +52,13 @@
 
   (let memus (propMethod.initState {
       TopMemu:[
-        {label:"序言",key:"1",children: <Menu onChange={action.changeContent} data={Preface}></Menu>},
-        {label:"语言教程",key:"2",children: <Menu onChange={action.changeContent} data={UIMenu}></Menu>},
-     
+        
+        {label:"语言教程",key:"baseUse",children: <Menu onChange={action.changeContent} data={UIMenu}></Menu>},
+        {label:"包管理",key:"package",children: <div>筹划中</div>},
+        {label:"打包发布",key:"publish",children: <div>筹划中</div>},     
+        {label:"杂言",key:"someThingToSay",children: <Menu onChange={action.changeContent} data={Preface}></Menu>},
       ],
+
       setState:(lambda (key x)
         (set state[key] x)
         (propMethod.update )

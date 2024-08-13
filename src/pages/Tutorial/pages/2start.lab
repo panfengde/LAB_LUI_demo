@@ -18,6 +18,10 @@
   <div style={{margin:"20px 0px 20px 0px"}}></div>
 )
 
+(function (openVscodeDownload )
+  (system.run "open https://code.visualstudio.com/Download")
+)
+
 
 (let content 
   <div className={aStyle}>
@@ -25,8 +29,7 @@
     <div >新建一个文件，如index.lab。我们会在这个文件中编写代码。</div>
     <div > 你可以使用你喜欢的任意编辑器编写，但是目前推荐使用vscode，目前会有一些vscode插件辅助你编程 </div>
     <FoldCard title="点击查看vscode说明">
-      <button >点击下载VSCode </button>
-      <div > 注：这里只是为了方便你下载vscode，如有疑问可以去官网下载</div>
+      <button onClick={openVscodeDownload}>前往VSCode下载 </button>
       <button >语言插件下载 </button>
     </FoldCard >
     <div className={aTitle}>我们编写一个数据收集功能。将收集到的数据，传递给服务端。</div>
@@ -40,7 +43,7 @@
     <div className={aTitle}>服务端部分</div>
     <div >新建一个文件，如serve.lab。我们会在这个文件中编写服务端代码。</div>
     <CodeComponent code={httpServeStr} ></CodeComponent>
-    使用LUI打开serve.lab就将执行这个服务
+    使用LUI打开 serve.lab 就将执行这个服务
   </div>
 )
 
